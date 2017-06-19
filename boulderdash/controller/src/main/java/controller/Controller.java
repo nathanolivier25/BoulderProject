@@ -11,4 +11,17 @@ public class Controller
 	private IModel model;
 	private IView view;
 	private Clock clock;
+
+	
+	public Controller (IModel model)
+	{
+		
+	}
+	
+	public void run()
+	{
+		
+	}
 }
+
+	
