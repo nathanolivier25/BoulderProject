@@ -3,6 +3,7 @@ package view;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.text.html.parser.Entity;
 
 import contract.OrderType;
 
@@ -17,7 +18,7 @@ public class View implements IView {
 		
 	}
 	
-	public void DrawMap(ArrayList<Entity>)
+	public void DrawMap(ArrayList<Entity> DrawMap)
 	{
 		
 	}
@@ -47,6 +48,13 @@ public class View implements IView {
 	
 	public OrderType GetOrder()
 	{
+		return lastOrder;
+		
+	}
+
+	@Override
+	public void displayMessage(String message) {
+		// TODO Auto-generated method stub
 		
 	}
 
