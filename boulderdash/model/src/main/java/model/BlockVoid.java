@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import contract.EntityType;
 import contract.OrderType;
 
-public class BlocDirt extends Entity {
+public class BlockVoid extends Entity{
 
-	public BlocDirt(int Posx, int Posy, EntityType typeID) {
+	public BlockVoid(int Posx, int Posy, EntityType typeID) {
 		super(Posx, Posy, typeID);
 		// TODO Auto-generated constructor stub
 	}
@@ -17,4 +17,5 @@ public class BlocDirt extends Entity {
 		// TODO Auto-generated method stub
 		
 	}
+
 }

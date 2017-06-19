@@ -5,10 +5,23 @@ import java.util.ArrayList;
 import contract.IEntity;
 import contract.OrderType;
 import model.Entity;
+import model.dao.AbstractDAO.LevelDAO;
 
 public class Model {
+	
+	// Aggregation between Level DAO (B) and model (A)
+	protected LevelDAO leveldao;
 
-	private ArrayList <Entity>;
+	public LevelDAO getLevelDAO() {
+		return leveldao;
+	}
+
+	public void setLevelDAO(LevelDAO leveldao) {
+		this.leveldao = leveldao;
+		leveldao.setModel(this);
+	}
+	
+	private ArrayList <Entity> model;
 	private int score;
 	
 	public void model(int world, int level) {
@@ -19,21 +32,19 @@ public class Model {
 		
 	}
 	public boolean isVictory() {
+		return false;
 
 	}
 	public boolean isLost(){
+		return false;
 		
 	}
 	public ArrayList<IEntity> GetMap(){
+		return null;
 		
 	}
 	
-	protected Entity entity;
-	
-	public Model() {
-		this.entity = new Entity(score, score, null);
-		this.entity.setModel(this);
-	}
+
 
 	public int getScore() {
 		return score;
@@ -43,11 +54,22 @@ public class Model {
 		this.score = score;
 	}
 
-	public Entity getEntity() {
-		return entity;
+	public LevelDAO getLeveldao() {
+		return leveldao;
 	}
 
-	public void setEntity(Entity entity) {
-		this.entity = entity;
+	public void setLeveldao(LevelDAO leveldao) {
+		this.leveldao = leveldao;
 	}
+
+	public ArrayList<Entity> getModel() {
+		return model;
+	}
+
+	public void setModel(ArrayList<Entity> model) {
+		this.model = model;
+	}
+
+
+	
 }
