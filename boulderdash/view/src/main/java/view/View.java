@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
-public class view 
+import contract.OrderType;
+
+public class View 
 {
 	private ArrayList <ElementSprite> image;
 	private JFrame windows;
 	private OrderType lastOrder;
 	
-	public view()
+	public View()
 	{
 		
 	}
@@ -35,7 +37,7 @@ public class view
 		
 	}
 	
-	public OrderType GetOrder();
+	public OrderType GetOrder()
 	{
 		
 	}
