@@ -31,6 +31,9 @@ public class View implements IView {
 	public void keyPressed(KeyEvent e)
 	{
 		if (e.getKeyCode() == KeyEvent.VK_UP);
+		{
+			// return up;
+		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN);
 		if (e.getKeyCode() == KeyEvent.VK_LEFT);
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT);
