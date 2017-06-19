@@ -1,7 +1,7 @@
 package view;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-
 import javax.swing.JFrame;
 
 import contract.OrderType;
@@ -28,12 +28,19 @@ public class View implements IView {
 		
 	}
 	
-	public void keyPressed(e KeyEvent)
+	public void keyPressed(KeyEvent e)
 	{
+		if (e.getKeyCode() == KeyEvent.VK_UP);
+		{
+			// return up;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_DOWN);
+		if (e.getKeyCode() == KeyEvent.VK_LEFT);
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT);
 		
 	}
 	
-	public void keyReleased(e KeyEvent)
+	public void keyReleased(KeyEvent e)
 	{
 		
 	}
@@ -43,11 +50,6 @@ public class View implements IView {
 		
 	}
 
-	@Override
-	public void displayMessage(String message) {
-		// TODO Auto-generated method stub
-		
-	}
 }
 
 	

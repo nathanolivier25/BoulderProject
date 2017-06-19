@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Graphics;
 import java.awt.Image;
 
 public class ElementSprite 
@@ -14,7 +15,7 @@ public class ElementSprite
 		
 	}
 	
-	public void painComposant(g Graphics)
+	public void painComposant(Graphics g)
 	{
 		
 	}
