@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import contract.IEntity;
 import contract.OrderType;
+import model.Entity;
 
 public class Model {
 
@@ -25,5 +26,28 @@ public class Model {
 	}
 	public ArrayList<IEntity> GetMap(){
 		
+	}
+	
+	protected Entity entity;
+	
+	public Model() {
+		this.entity = new Entity(score, score, null);
+		this.entity.setModel(this);
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public Entity getEntity() {
+		return entity;
+	}
+
+	public void setEntity(Entity entity) {
+		this.entity = entity;
 	}
 }
