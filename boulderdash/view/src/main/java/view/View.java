@@ -31,6 +31,14 @@ public class View implements IView {
 	
 	public void keyPressed(KeyEvent e)
 	{
+		/*swtich (keyCode)
+		{
+			case KeyEvent.VK_UP;
+				
+		}*/
+		
+		
+		
 		if (e.getKeyCode() == KeyEvent.VK_UP);
 		{
 			// return up;
