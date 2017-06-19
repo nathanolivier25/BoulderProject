@@ -1,6 +1,6 @@
 package contract;
-
-public interface IView extends View{
+import java.util.ArrayList;
+public interface IView {
 
 	public void DrawMap(Arraylist <IEntity> );
 	public OrderType GetOrder();
