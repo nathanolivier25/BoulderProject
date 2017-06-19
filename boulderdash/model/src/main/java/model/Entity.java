@@ -1,8 +1,11 @@
 package model;
 
-import contract.EntityType;
+import java.util.ArrayList;
 
-public class Entity {
+import contract.EntityType;
+import contract.OrderType;
+
+public abstract class Entity {
 
 	public int Posx;
 	public int Posy;
@@ -11,8 +14,6 @@ public class Entity {
 	public Entity(int Posx, int Posy, EntityType typeID) {
 
 	}
-
-
 
 	protected Model model;
 
@@ -23,4 +24,11 @@ public class Entity {
 	public void setModel(Model model) {
 		this.model = model;
 	}
+
+	public void Update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public abstract void Update(ArrayList<Entity> test, OrderType order);
 }
