@@ -23,6 +23,7 @@ public class View
 	}
 	
 	public void loadImage()
+	
 	{
 		
 	}
