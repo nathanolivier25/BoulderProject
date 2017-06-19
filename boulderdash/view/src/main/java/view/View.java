@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 
 import contract.OrderType;
 
-public class View 
-{
+public class View implements IView {
+	
 	private ArrayList <ElementSprite> image;
 	private JFrame windows;
 	private OrderType lastOrder;
@@ -40,6 +40,12 @@ public class View
 	
 	public OrderType GetOrder()
 	{
+		
+	}
+
+	@Override
+	public void displayMessage(String message) {
+		// TODO Auto-generated method stub
 		
 	}
 }
