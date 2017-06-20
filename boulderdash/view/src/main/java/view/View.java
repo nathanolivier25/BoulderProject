@@ -35,6 +35,7 @@ public class View implements IView, KeyListener{
 		image.add(new ElementSprite("c:/monmagnifiquechemin",33,0,48,16,EntityType.VOID));
 		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,16,16,EntityType.ROCK));
 		
+		
 	}
 	
 	public void keyPressed(KeyEvent e)

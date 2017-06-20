@@ -10,7 +10,7 @@ public class ElementSprite
 	private int drawy;
 	private int id;
 	
-	public ElementSprite(String path, int id)
+	public ElementSprite(String path, int x1, int y1, int x2, int y2)
 	{
 		
 	}
