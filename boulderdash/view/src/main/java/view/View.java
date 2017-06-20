@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.text.html.parser.Entity;
@@ -10,7 +11,7 @@ import contract.IEntity;
 import contract.IView;
 
 
-public class View implements IView {
+public class View implements IView, KeyListener{
 	
 	private ArrayList <ElementSprite> image;
 	private JFrame windows;
@@ -55,12 +56,19 @@ public class View implements IView {
 	}
 	public void keyReleased(KeyEvent e)
 	{
-		
+		lastOrder = null; 
 	}
 	
 	public OrderType GetOrder()
 	{
 		return lastOrder;
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) 
+	{
+		
 		
 	}
 
