@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 
 import contract.OrderType;
-import model.BlockVoid;
 import contract.EntityType;
 import contract.IEntity;
 import contract.IView;
