@@ -10,14 +10,13 @@ public class EntityEnemy extends Entity{
 	public EntityEnemy(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.ENEMY);
 	}
-
+// NEED TO TRANSLATE EVERYTHING IN ENGLISH !!!!!!!!!!!
 	@Override
 	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 
 		return test;
 	}
 	
-	//Début du comportement des Enemy
 	public void pathFinding(ArrayList<Entity> test) throws Exception {
         Entity player = null;
         for(int i = 0;i < test.size();i++)
@@ -68,8 +67,39 @@ public class EntityEnemy extends Entity{
 
         return routes;
     }
-	
-	
-	
-	
+	/**
+    package model;
+
+    import java.util.Dictionary;
+    import java.util.HashMap;
+
+     
+    public class Route {
+
+
+
+        private int nbCase;
+        private HashMap<Integer, Integer> laRoute;
+        private int direction;
+
+
+
+       public Route(int pdirection)
+       {
+           nbCase = 0;
+           laRoute = new HashMap<>();
+           direction = pdirection;
+       }
+
+
+        public HashMap<Integer, Integer> getLaRoute() {
+            return laRoute;
+        }
+
+        public void setNbCase(int nbCase) {
+            this.nbCase = nbCase;
+        }
+    }
+	*/
+    
 }
