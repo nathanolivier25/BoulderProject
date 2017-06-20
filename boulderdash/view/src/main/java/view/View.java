@@ -34,7 +34,7 @@ public class View implements IView {
 	
 	public void keyPressed(KeyEvent e)
 	{
-		switch (e)
+		switch (e.getKeyCode())
 		{
 			case KeyEvent.VK_UP:
 				lastOrder = OrderType.UP ; 
