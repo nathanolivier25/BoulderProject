@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.text.html.parser.Entity;
 
 import contract.OrderType;
+import contract.EntityType;
 import contract.IEntity;
 import contract.IView;
 
@@ -30,7 +31,10 @@ public class View implements IView, KeyListener{
 	public void loadImage()
 	
 	{
-		
+		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,16,16,EntityType.WALL));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",17,0,36,16,EntityType.DIRT));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",33,0,48,16,EntityType.VOID));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,16,16,EntityType.ROCK));
 		
 	}
 	
@@ -54,7 +58,7 @@ public class View implements IView, KeyListener{
 				break;
 		}
 		
-	}
+	} 
 	public void keyReleased(KeyEvent e)
 	{
 		lastOrder = null; 
