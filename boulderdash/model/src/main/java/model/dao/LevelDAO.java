@@ -8,8 +8,11 @@ import java.util.ArrayList;
 import contract.EntityType;
 import model.BlockEnd;
 import model.BlockVoid;
+import model.BlocWall;
 import model.Entity;
 import model.EntityDiamond;
+import model.EntityEnemy;
+import model.EntityPlayer;
 import model.EntityRock;
 
 
@@ -38,7 +41,7 @@ public class LevelDAO extends AbstractDAO
 				int posx = result.getInt(2);
 				int posy = result.getInt(3);
 
-				
+
 				switch(result.getInt(4))
 				{
 				case 1:
@@ -57,24 +60,27 @@ public class LevelDAO extends AbstractDAO
 					example.add(new BlockVoid(posx,posy));
 					break;
 				case 5:
-					example.add(new BlockWall(posx,posy));
+					example.add(new BlocWall(posx,posy));
 					break;
 				case 6:
-					type = EntityType.VOID;
+					example.add(new EntityPlayer(posx,posy));
+					example.add(new BlockVoid(posx,posy));
 					break;
-				default :
+				case 7:
+					example.add(new EntityEnemy(posx,posy));
+					example.add(new BlockVoid(posx,posy));
 					break;
+				default:
+					break;
+
+
 				}
-				
-				
+
+				result.close();
 			}
-			example.add(new IEntity(result.getInt(idColumnIndex), result.getString(nameColumnIndex)));
-
-			result.close();
+			return example;
 		}
-		return examples;
+
+
+
 	}
-
-
-
-}
