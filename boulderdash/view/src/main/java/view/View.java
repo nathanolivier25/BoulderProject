@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.text.html.parser.Entity;
 
 import contract.OrderType;
+import contract.IEntity;
 import contract.IView;
 public class View implements IView {
 	
@@ -18,7 +19,7 @@ public class View implements IView {
 		
 	}
 	
-	public void DrawMap(ArrayList<Entity> DrawMap)
+	public void DrawMap(ArrayList<IEntity> DrawMap)
 	{
 		
 	}
@@ -60,11 +61,7 @@ public class View implements IView {
 		
 	}
 
-	@Override
-	public void displayMessage(String message) {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 }
 
