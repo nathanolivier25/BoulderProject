@@ -16,6 +16,6 @@ public class BlockEnd extends Entity{
 
 		
 		// TODO Auto-generated method stub
-		return null;
+		return test;
 	}
 }
