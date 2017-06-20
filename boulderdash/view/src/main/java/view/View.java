@@ -30,10 +30,13 @@ public class View implements IView, KeyListener{
 	public void loadImage()
 	
 	{
-		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,16,16,EntityType.WALL));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",17,0,36,16,EntityType.DIRT));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",33,0,48,16,EntityType.VOID));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,16,16,EntityType.ROCK));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,EntityType.WALL));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",17,0,EntityType.DIRT));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",33,0,EntityType.VOID));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",49,0,EntityType.ROCK));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",65,0,EntityType.DIAMOND));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",97,0,EntityType.END));
+		image.add(new ElementSprite("c:/monmagnifiquechemin",145,0,EntityType.ENEMY));
 		
 		
 	}
