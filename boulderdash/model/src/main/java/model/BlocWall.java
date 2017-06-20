@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class BlocWall extends Entity{
 
-	public BlocWall(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public BlocWall(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.WALL);
 	}
 
 	@Override

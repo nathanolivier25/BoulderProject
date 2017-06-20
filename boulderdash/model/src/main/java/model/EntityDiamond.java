@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class EntityDiamond extends Entity{
 
-	public EntityDiamond(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public EntityDiamond(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.DIAMOND);
 	}
 
 	@Override

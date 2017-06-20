@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class EntityRock extends Entity{
 
-	public EntityRock(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public EntityRock(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.ROCK);
 	}
 
 	@Override

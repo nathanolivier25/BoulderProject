@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class BlockVoid extends Entity{
 
-	public BlockVoid(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public BlockVoid(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.VOID);
 	}
 
 	@Override

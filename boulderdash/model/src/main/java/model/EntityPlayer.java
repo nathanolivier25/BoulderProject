@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class EntityPlayer extends Entity{
 
-	public EntityPlayer(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public EntityPlayer(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.PLAYER);
 	}
 
 	@Override

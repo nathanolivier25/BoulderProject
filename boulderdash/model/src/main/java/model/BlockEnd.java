@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class BlockEnd extends Entity{
 
-	public BlockEnd(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public BlockEnd(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.END);
 	}
 
 	@Override

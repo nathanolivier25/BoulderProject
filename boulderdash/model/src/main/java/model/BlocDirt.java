@@ -7,9 +7,8 @@ import contract.OrderType;
 
 public class BlocDirt extends Entity {
 
-	public BlocDirt(int Posx, int Posy, EntityType typeID) {
-		super(Posx, Posy, typeID);
-		// TODO Auto-generated constructor stub
+	public BlocDirt(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.DIRT);
 	}
 
 	@Override
