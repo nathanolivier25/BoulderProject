@@ -11,6 +11,7 @@ public class EntityDiamond extends Entity{
 		super(Posx, Posy, EntityType.DIAMOND);
 	}
 
+	// Falling diamond.
 	@Override
 	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 
