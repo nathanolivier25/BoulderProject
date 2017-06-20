@@ -1,27 +1,47 @@
 package view;
 
 import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import contract.EntityType;
 
 public class ElementSprite 
 {
-	private Image buffer;
+	private BufferedImage buffer;
 	private int drawx;
 	private int drawy;
-	private int id;
+	private EntityType id;
 	
-	public ElementSprite(String path, int x1, int y1, int x2, int y2)
+	public ElementSprite(String path, int x1, int y1, EntityType type)
 	{
+		id = type;
+		try {
+            BufferedImage temp = ImageIO.read(new File(path));
+            buffer = temp.getSubimage(x1, y1, 16, 16);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 		
 	}
 	
 	public void painComposant(Graphics g)
 	{
-		
+		g.drawImage(buffer, drawx, drawy, null);
 	}
 	public void setWhereToDraw(int x, int y)
 	{
-		
+		drawx = x;
+		drawy = y;
+	}
+	
+	public EntityType getType()
+	{
+		return id;
 	}
 	
 }
