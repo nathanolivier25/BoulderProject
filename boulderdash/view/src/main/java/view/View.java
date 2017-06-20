@@ -8,6 +8,8 @@ import javax.swing.text.html.parser.Entity;
 import contract.OrderType;
 import contract.IEntity;
 import contract.IView;
+
+
 public class View implements IView {
 	
 	private ArrayList <ElementSprite> image;
@@ -32,24 +34,25 @@ public class View implements IView {
 	
 	public void keyPressed(KeyEvent e)
 	{
-		/*swtich (keyCode)
+		switch (e)
 		{
-			case KeyEvent.VK_UP;
-				
-		}*/
-		
-		
-		
-		if (e.getKeyCode() == KeyEvent.VK_UP);
-		{
-			// return up;
+			case KeyEvent.VK_UP:
+				lastOrder = OrderType.UP ; 
+				break;
+			case KeyEvent.VK_DOWN:
+				lastOrder = OrderType.DOWN;
+				break;
+			case KeyEvent.VK_RIGHT:
+				lastOrder = OrderType.RIGHT;
+				break;
+			case KeyEvent.VK_LEFT:
+				lastOrder = OrderType.LEFT;
+				break;
+			default:
+				break;
 		}
-		if (e.getKeyCode() == KeyEvent.VK_DOWN);
-		if (e.getKeyCode() == KeyEvent.VK_LEFT);
-		if (e.getKeyCode() == KeyEvent.VK_RIGHT);
 		
 	}
-	
 	public void keyReleased(KeyEvent e)
 	{
 		
