@@ -12,9 +12,9 @@ public class EntityPlayer extends Entity{
 	}
 
 	@Override
-	public void Update(ArrayList<Entity> test, OrderType order) {
-		// TODO Auto-generated method stub
-		
-	}
+	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 
+		// TODO Auto-generated method stub
+		return test;
+	}
 }

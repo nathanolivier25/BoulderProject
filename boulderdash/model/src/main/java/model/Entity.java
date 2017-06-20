@@ -25,10 +25,11 @@ public abstract class Entity {
 		this.model = model;
 	}
 
-	public void Update() {
+	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public abstract void Update(ArrayList<Entity> test, OrderType order);
+	
 }
