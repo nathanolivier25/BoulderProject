@@ -23,6 +23,8 @@ public class Model {
 	
 	private ArrayList <Entity> model;
 	private int score;
+	private int sizeX;
+	private int sizeY;
 	
 	public void model(int world, int level) {
 		

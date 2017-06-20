@@ -13,7 +13,7 @@ public class Controller
 	private Clock clock;
 
 	
-	public Controller (IModel model)
+	public Controller (IModel model, IView view)
 	{
 		
 	}
