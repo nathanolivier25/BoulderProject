@@ -45,17 +45,5 @@ public abstract class AbstractDAO {
 	protected static CallableStatement prepareCall(final String query) {
 		return BoulderDashBDDConnector.getInstance().prepareCall(query);
 	}
-	
-	public class LevelDAO {
-		protected Model model;
-
-		public Model getModel() {
-			return model;
-		}
-
-		public void setModel(Model model) {
-			this.model = model;
-		}
-	}
 
 }

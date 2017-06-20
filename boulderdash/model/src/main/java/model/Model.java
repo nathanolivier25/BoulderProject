@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import contract.IEntity;
 import contract.OrderType;
 import model.Entity;
-import model.dao.AbstractDAO.LevelDAO;
+import model.dao.LevelDAO;
 import contract.IModel;
 
 public class Model implements IModel{
