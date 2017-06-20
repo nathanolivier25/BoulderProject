@@ -6,8 +6,9 @@ import contract.IEntity;
 import contract.OrderType;
 import model.Entity;
 import model.dao.AbstractDAO.LevelDAO;
+import contract.IModel;
 
-public class Model {
+public class Model implements IModel{
 	
 	// Aggregation between Level DAO (B) and model (A)
 	protected LevelDAO leveldao;

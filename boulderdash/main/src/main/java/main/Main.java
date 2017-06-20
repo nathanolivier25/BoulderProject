@@ -22,7 +22,7 @@ public abstract class Main {
      *            the arguments
      */
     public static void main(final String[] args) {
-        final Controller controller = new Controller(new View(), new Model());
+        final Controller controller = new Controller(new Model(), new View());
 
         try {
             controller.start();
