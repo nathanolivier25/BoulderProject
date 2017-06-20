@@ -4,6 +4,7 @@ import java.time.Clock;
 
 import contract.IModel;
 import contract.IView;
+import contract.OrderType;
 
 public class Controller 
 {
@@ -15,12 +16,29 @@ public class Controller
 	
 	public Controller (IModel model, IView view)
 	{
-		
+		this.model = model;
+		this.view = view;
+		running = false;
 	}
 	
 	public void run()
 	{
+		OrderType order = null;
 		
+		
+		while(running == true)
+		{
+			
+			model.Update(order);
+			
+			
+			view.DrawMap(model.GetMap());
+			order = view.GetOrder();
+			
+			if(model.isLost() || model.isVictory())
+				running = false;
+					
+		}
 	}
 }
 
