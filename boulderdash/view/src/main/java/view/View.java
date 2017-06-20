@@ -31,6 +31,7 @@ public class View implements IView, KeyListener{
 	
 	{
 		
+		
 	}
 	
 	public void keyPressed(KeyEvent e)
