@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 
 import contract.OrderType;
+import model.BlockVoid;
 import contract.EntityType;
 import contract.IEntity;
 import contract.IView;
@@ -22,9 +23,23 @@ public class View implements IView, KeyListener{
 		
 	}
 	
-	public void DrawMap(ArrayList<IEntity> DrawMap)
+	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
-		
+		for  (int i = 0; i < drawMap.size(); i++)
+		{
+			EntityType A = drawMap.get(i).GetType();
+			
+			for  (int j = 0; j < image.size(); j++)
+			{
+				if (image.get(j).getType() == A)
+				{
+				
+					image.get(j).setWhereToDraw(drawMap.get(i).GetPosx(), drawMap.get(i).GetPosy());
+					image.get(j).paintComponent(windows.getGraphics());
+				}
+				
+			}
+		}
 	}
 	
 	public void loadImage()
