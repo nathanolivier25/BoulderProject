@@ -23,12 +23,7 @@ public abstract class Main {
      */
     public static void main(final String[] args) {
         final Controller controller = new Controller(new Model(), new View());
-
-        try {
-            controller.run();
-        } catch (final SQLException exception) {
-            exception.printStackTrace();
-        }
+        controller.run();
     }
 
 }
