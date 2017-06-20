@@ -25,7 +25,7 @@ public abstract class Main {
         final Controller controller = new Controller(new Model(), new View());
 
         try {
-            controller.start();
+            controller.run();
         } catch (final SQLException exception) {
             exception.printStackTrace();
         }
