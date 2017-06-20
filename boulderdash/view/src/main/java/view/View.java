@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.text.html.parser.Entity;
 
 import contract.OrderType;
-
+import contract.IView;
 public class View implements IView {
 	
 	private ArrayList <ElementSprite> image;
