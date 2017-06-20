@@ -9,5 +9,6 @@ public enum EntityType {
 	PLAYER,
 	DIAMOND,
 	ROCK,
+	ENEMY,
 	
 }
