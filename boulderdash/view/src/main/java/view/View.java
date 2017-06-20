@@ -30,15 +30,14 @@ public class View implements IView, KeyListener{
 	public void loadImage()
 	
 	{
-		image.add(new ElementSprite("c:/monmagnifiquechemin",0,0,EntityType.WALL));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",17,0,EntityType.DIRT));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",33,0,EntityType.VOID));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",49,0,EntityType.ROCK));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",65,0,EntityType.DIAMOND));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",97,0,EntityType.END));
-		image.add(new ElementSprite("c:/monmagnifiquechemin",145,0,EntityType.ENEMY));
-		
-		
+		image.add(new ElementSprite("74359.png",0,0,EntityType.WALL));
+		image.add(new ElementSprite("74359.png",17,0,EntityType.DIRT));
+		image.add(new ElementSprite("74359.png",33,0,EntityType.VOID));
+		image.add(new ElementSprite("74359.png",49,0,EntityType.ROCK));
+		image.add(new ElementSprite("74359.png",65,0,EntityType.DIAMOND));
+		image.add(new ElementSprite("74359.png",97,0,EntityType.END));
+		image.add(new ElementSprite("74359.png",145,0,EntityType.ENEMY));
+				
 	}
 	
 	public void keyPressed(KeyEvent e)
