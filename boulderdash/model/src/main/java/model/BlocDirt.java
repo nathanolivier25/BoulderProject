@@ -14,6 +14,14 @@ public class BlocDirt extends Entity {
 	@Override
 	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 
+		
+		for  (int i = 0; i < test.size(); i++)
+		{
+				if 	(test.get(i).getPosx() == this.getPosx() && test.get(i).getPosy() == this.getPosy() && test.get(i).getTypeID() == EntityType.PLAYER)
+				{
+					test.add(new BlockVoid(getPosx(), getPosy()));
+				}
+		}
 		// TODO Auto-generated method stub
 		return test;
 		

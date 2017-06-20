@@ -2,7 +2,7 @@ package model.dao;
 
 import model.Model;
 
-public class LevelDAO {
+public class LevelDAO extends AbstractDAO{
 	protected Model model;
 
 	public Model getModel() {

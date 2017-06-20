@@ -15,21 +15,30 @@ public abstract class Entity {
 
 	}
 
-	protected Model model;
-
-	public Model getModel() {
-		return model;
+	public EntityType getTypeID() {
+		return typeID;
 	}
 
-	public void setModel(Model model) {
-		this.model = model;
+	public int getPosx() {
+		return Posx;
+	}
+
+	public void setPosx(int posx) {
+		Posx = posx;
+	}
+
+	public int getPosy() {
+		return Posy;
+	}
+
+	public void setPosy(int posy) {
+		Posy = posy;
 	}
 
 	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 		return null;
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
 }

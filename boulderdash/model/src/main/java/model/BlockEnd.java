@@ -14,7 +14,8 @@ public class BlockEnd extends Entity{
 	@Override
 	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 
+		
 		// TODO Auto-generated method stub
-		return test;
+		return null;
 	}
 }
