@@ -29,7 +29,7 @@ public class ElementSprite
 		
 	}
 	
-	public void painComposant(Graphics g)
+	public void paintComponent(Graphics g) 
 	{
 		g.drawImage(buffer, drawx, drawy, null);
 	}
