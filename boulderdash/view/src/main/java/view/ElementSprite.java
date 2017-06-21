@@ -22,6 +22,7 @@ public class ElementSprite
 		try {
             BufferedImage temp = ImageIO.read(new File(path));
             buffer = temp.getSubimage(x1, y1, 16, 16);
+            
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
