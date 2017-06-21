@@ -11,10 +11,17 @@ public class EntityDiamond extends Entity{
 		super(Posx, Posy, EntityType.DIAMOND);
 	}
 
+	// Falling diamond.
 	@Override
 	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
 
-		// TODO Auto-generated method stub
+		for (int i = 0; i < test.size(); i++)
+		{
+			if (test.get(i).getPosx() == this.getPosx() && test.get(i).getPosy() == this.getPosy()+1 && test.get(i).getTypeID() == EntityType.VOID)
+			{
+				Posy = Posy+1;
+			}
+		}
 		return test;
 	}
 

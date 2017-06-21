@@ -19,7 +19,17 @@ public class View implements IView, KeyListener{
 	
 	public View()
 	{
+		this.image = new ArrayList <ElementSprite>();
+		this.lastOrder = null;
+		this.windows = new JFrame();
 		
+		windows.setTitle("Boulder Dash of the dead");
+		windows.setSize(800, 600);
+		windows.setLocationRelativeTo(null);
+		windows.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		windows.setVisible(true);
+		
+		loadImage();
 	}
 	
 	public void DrawMap(ArrayList<IEntity> drawMap)
@@ -45,12 +55,13 @@ public class View implements IView, KeyListener{
 	
 	{
 		image.add(new ElementSprite("74359.png",0,0,EntityType.WALL));
-		image.add(new ElementSprite("74359.png",17,0,EntityType.DIRT));
-		image.add(new ElementSprite("74359.png",33,0,EntityType.VOID));
-		image.add(new ElementSprite("74359.png",49,0,EntityType.ROCK));
-		image.add(new ElementSprite("74359.png",65,0,EntityType.DIAMOND));
-		image.add(new ElementSprite("74359.png",97,0,EntityType.END));
-		image.add(new ElementSprite("74359.png",145,0,EntityType.ENEMY));
+		image.add(new ElementSprite("74359.png",16,0,EntityType.DIRT));
+		image.add(new ElementSprite("74359.png",32,0,EntityType.VOID));
+		image.add(new ElementSprite("74359.png",48,0,EntityType.ROCK));
+		image.add(new ElementSprite("74359.png",64,0,EntityType.DIAMOND));
+		image.add(new ElementSprite("74359.png",96,0,EntityType.END));
+		image.add(new ElementSprite("74359.png",144,0,EntityType.ENEMY));
+		image.add(new ElementSprite("74336.png",48,224,EntityType.PLAYER));
 				
 	}
 	
