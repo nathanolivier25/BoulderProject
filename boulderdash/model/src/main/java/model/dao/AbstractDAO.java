@@ -3,7 +3,6 @@ package model.dao;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 
-import model.Model;
 
 /**
  * <h1>The Class AbstractDAO.</h1>

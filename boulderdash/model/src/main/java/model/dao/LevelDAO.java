@@ -9,7 +9,6 @@ import contract.IEntity;
 import model.BlockEnd;
 import model.BlockVoid;
 import model.BlocWall;
-import model.Entity;
 import model.EntityDiamond;
 import model.EntityEnemy;
 import model.EntityPlayer;
