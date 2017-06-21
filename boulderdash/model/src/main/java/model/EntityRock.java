@@ -17,7 +17,7 @@ public class EntityRock extends Entity{
 
 		for (int i = 0; i < test.size(); i++)
 		{
-			if (test.get(i).getPosx() == this.getPosx() && test.get(i).getPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
+			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
 			{
 				Posy = Posy+1;
 			}
