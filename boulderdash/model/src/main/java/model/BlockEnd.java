@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import contract.EntityType;
+import contract.IEntity;
 import contract.OrderType;
 
 public class BlockEnd extends Entity{
@@ -11,8 +12,9 @@ public class BlockEnd extends Entity{
 		super(Posx, Posy, EntityType.END);
 	}
 
-	@Override
-	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
+	
+	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order)
+	{
 
 		
 		// TODO Auto-generated method stub

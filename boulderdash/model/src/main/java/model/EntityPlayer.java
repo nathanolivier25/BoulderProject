@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import contract.EntityType;
+import contract.IEntity;
 import contract.OrderType;
 
 public class EntityPlayer extends Entity{
@@ -11,8 +12,8 @@ public class EntityPlayer extends Entity{
 		super(Posx, Posy, EntityType.PLAYER);
 	}
 
-	@Override
-	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
+	
+	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
 		// TODO Auto-generated method stub
 		return test;

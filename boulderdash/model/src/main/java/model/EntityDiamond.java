@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import contract.EntityType;
+import contract.IEntity;
 import contract.OrderType;
 
 public class EntityDiamond extends Entity{
@@ -12,8 +13,8 @@ public class EntityDiamond extends Entity{
 	}
 
 	// Falling diamond.
-	@Override
-	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
+	
+	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
 		for (int i = 0; i < test.size(); i++)
 		{
