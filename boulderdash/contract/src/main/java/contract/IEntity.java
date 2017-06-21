@@ -1,6 +1,7 @@
 package contract;
 
-public interface IEntity {
+public interface IEntity 
+{
 
 	public int GetPosx();
 	

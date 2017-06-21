@@ -1,11 +1,13 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import contract.IEntity;
 import contract.OrderType;
 import model.Entity;
 import model.dao.LevelDAO;
+
 import contract.IModel;
 
 public class Model implements IModel{
@@ -13,14 +15,14 @@ public class Model implements IModel{
 	
 	protected LevelDAO leveldao;
 
-	private ArrayList <Entity> model;
+	private ArrayList <IEntity> model;
 	private int score;
 	private int sizeX;
 	private int sizeY;
 	
 	public void model(int world, int level) 
 	{
-		
+		 
 	}
 	
 	public void Update(OrderType order)
@@ -39,7 +41,7 @@ public class Model implements IModel{
 	}
 	public ArrayList<IEntity> GetMap()
 	{
-		return null;
+		return model;
 		
 	}
 	
@@ -54,27 +56,5 @@ public class Model implements IModel{
 	{
 		this.score = score;
 	}
-
-	public LevelDAO getLeveldao() 
-	{
-		return leveldao;
-	}
-
-	public void setLeveldao(LevelDAO leveldao) 
-	{
-		this.leveldao = leveldao;
-	}
-
-	public ArrayList<Entity> getModel() 
-	{
-		return model;
-	}
-
-	public void setModel(ArrayList<Entity> model) 
-	{
-		this.model = model;
-	}
-
-
 	
 }

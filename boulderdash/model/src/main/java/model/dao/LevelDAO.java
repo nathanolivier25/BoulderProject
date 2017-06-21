@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import contract.EntityType;
 import model.BlockEnd;
 import model.BlockVoid;
 import model.BlocWall;
@@ -78,9 +77,9 @@ public class LevelDAO extends AbstractDAO
 
 				result.close();
 			}
-			return example;
+			
 		}
-
-
-
+		return example;
 	}
+
+}
