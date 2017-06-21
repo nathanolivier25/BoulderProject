@@ -13,11 +13,9 @@ public class Model implements IModel{
 	
 
 	private ArrayList <IEntity> model;
-	private int score;
 	
 	public void model(int world) 
 	{
-		 score = 0;
 		 
 		 try {
 			model = LevelDAO.getBackground(world);
@@ -31,6 +29,9 @@ public class Model implements IModel{
 	
 	public void Update(OrderType order)
 	{
+		for(int i = 0; i <model.size(); i++)
+			model.get(i).Update
+		
 		
 	}
 	public boolean isVictory()
@@ -53,12 +54,7 @@ public class Model implements IModel{
 
 	public int getScore()
 	{
-		return score;
-	}
-
-	public void setScore(int score) 
-	{
-		this.score = score;
+		return 0;
 	}
 	
 }

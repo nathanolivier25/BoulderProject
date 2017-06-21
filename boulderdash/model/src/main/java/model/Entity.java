@@ -36,7 +36,7 @@ public abstract class Entity implements IEntity{
 		Posy = posy;
 	}
 
-	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
+	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 		return null;
 		// TODO Auto-generated method stub
 
