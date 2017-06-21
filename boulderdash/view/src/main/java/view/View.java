@@ -36,7 +36,7 @@ public class View implements IView, KeyListener{
 	{
 		for  (int i = 0; i < drawMap.size(); i++)
 		{
-			EntityType A = drawMap.get(i).GetType();
+			EntityType A = drawMap.get(i).getType();
 			
 			for  (int j = 0; j < image.size(); j++)
 			{
