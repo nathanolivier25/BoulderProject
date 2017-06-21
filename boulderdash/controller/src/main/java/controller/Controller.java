@@ -35,7 +35,7 @@ public class Controller
 			view.DrawMap(model.GetMap());
 			order = view.GetOrder();
 			
-			if(model.isLost() || model.isVictory())
+			if(model.isLost() == true || model.isVictory() == true)
 				running = false;
 					
 		}
