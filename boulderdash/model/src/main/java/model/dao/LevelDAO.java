@@ -51,15 +51,17 @@ public class LevelDAO extends AbstractDAO
 					example.add(new BlockEnd(posx,posy));
 					break;
 				case 2:
-					example.add(new EntityDiamond(posx,posy));
 					example.add(new BlockVoid(posx,posy));
+					example.add(new EntityDiamond(posx,posy));
+				
 					break;
 				case 3:
 					example.add(new BlocDirt(posx,posy));
 					break;
 				case 4:
-					example.add(new EntityRock(posx,posy));
 					example.add(new BlockVoid(posx,posy));
+					example.add(new EntityRock(posx,posy));
+				
 					break;
 				case 5:
 					example.add(new BlocWall(posx,posy));
@@ -68,12 +70,14 @@ public class LevelDAO extends AbstractDAO
 					example.add(new BlockVoid(posx,posy));
 					break;
 				case 7:
-					example.add(new EntityPlayer(posx,posy));
 					example.add(new BlockVoid(posx,posy));
+					example.add(new EntityPlayer(posx,posy));
+					
 					break;
 				case 8:
-					example.add(new EntityEnemy(posx,posy));
 					example.add(new BlockVoid(posx,posy));
+					example.add(new EntityEnemy(posx,posy));
+					
 					break;
 				default:
 					break;

@@ -19,7 +19,7 @@ public abstract class Main {
      *            the argument
      */
     public static void main(final String[] args) {
-        final Controller controller = new Controller(new Model(1), new View());
+        final Controller controller = new Controller(new Model(5), new View());
         controller.run();
     }
 
