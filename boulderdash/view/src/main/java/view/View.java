@@ -61,7 +61,7 @@ public class View implements IView, KeyListener{
 		image.add(new ElementSprite("74359.png",64,0,EntityType.DIAMOND));
 		image.add(new ElementSprite("74359.png",96,0,EntityType.END));
 		image.add(new ElementSprite("74359.png",144,0,EntityType.ENEMY));
-		image.add(new ElementSprite("74336.png",48,224,EntityType.PLAYER));
+		image.add(new ElementSprite("74359.png",48,224,EntityType.PLAYER));
 				
 	}
 	

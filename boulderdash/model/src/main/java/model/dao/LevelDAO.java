@@ -31,6 +31,8 @@ public class LevelDAO extends AbstractDAO
 	{
 		final CallableStatement callStatement = prepareCall(sqlGetBackGround);
 		ArrayList<IEntity> example = new ArrayList<IEntity>();
+		callStatement.setInt(1, id);
+
 		if (callStatement.execute()) 
 		{
 			final ResultSet result = callStatement.getResultSet();
