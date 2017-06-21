@@ -1,4 +1,13 @@
-model\dao\ExampleDAO.class
+model\Model.class
+model\EntityPlayer.class
+model\BlocWall.class
 model\dao\BoulderDashBDDConnector.class
+model\EntityEnemy.class
+model\BlocDirt.class
+model\Entity.class
 model\dao\AbstractDAO.class
-model\ModelFacade.class
+model\dao\LevelDAO.class
+model\BlockEnd.class
+model\EntityRock.class
+model\BlockVoid.class
+model\EntityDiamond.class

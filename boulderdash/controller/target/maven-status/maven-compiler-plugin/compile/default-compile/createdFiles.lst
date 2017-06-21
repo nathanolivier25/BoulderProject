@@ -1,1 +1,2 @@
-controller\ControllerFacade.class
+controller\Controller.class
+controller\EntityType.class

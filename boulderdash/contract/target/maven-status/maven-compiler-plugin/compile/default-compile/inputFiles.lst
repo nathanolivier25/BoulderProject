@@ -1,7 +1,5 @@
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\model\Example.java
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\model\package-info.java
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\view\package-info.java
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\model\IModel.java
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\controller\package-info.java
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\view\IView.java
-C:\Users\Corentin\git\BoulderProject\boulderdash\contract\src\main\java\controller\IController.java
+C:\Users\Nathan\git\BoulderProject\boulderdash\contract\src\main\java\contract\IView.java
+C:\Users\Nathan\git\BoulderProject\boulderdash\contract\src\main\java\contract\EntityType.java
+C:\Users\Nathan\git\BoulderProject\boulderdash\contract\src\main\java\contract\OrderType.java
+C:\Users\Nathan\git\BoulderProject\boulderdash\contract\src\main\java\contract\IEntity.java
+C:\Users\Nathan\git\BoulderProject\boulderdash\contract\src\main\java\contract\IModel.java

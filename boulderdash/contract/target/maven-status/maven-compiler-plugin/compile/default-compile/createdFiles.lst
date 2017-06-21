@@ -1,4 +1,5 @@
-view\IView.class
-model\Example.class
-model\IModel.class
-controller\IController.class
+contract\IView.class
+contract\EntityType.class
+contract\IModel.class
+contract\IEntity.class
+contract\OrderType.class
