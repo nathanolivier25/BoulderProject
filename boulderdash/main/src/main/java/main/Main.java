@@ -16,7 +16,7 @@ public abstract class Main {
      * The main method.
      *
      * @param args
-     *            the arguments
+     *            the argument
      */
     public static void main(final String[] args) {
         final Controller controller = new Controller(new Model(1), new View());
