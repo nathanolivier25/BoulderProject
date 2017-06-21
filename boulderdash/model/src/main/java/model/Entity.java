@@ -3,9 +3,10 @@ package model;
 import java.util.ArrayList;
 
 import contract.EntityType;
+import contract.IEntity;
 import contract.OrderType;
 
-public abstract class Entity {
+public abstract class Entity implements IEntity{
 
 	public int Posx;
 	public int Posy;

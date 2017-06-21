@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,16 +13,25 @@ import contract.IModel;
 
 public class Model implements IModel{
 	
-	
-	protected LevelDAO leveldao;
 
 	private ArrayList <IEntity> model;
 	private int score;
 	private int sizeX;
 	private int sizeY;
 	
-	public void model(int world, int level) 
+	public void model(int world) 
 	{
+		 score = 0;
+		 sizeX = 20;
+		 sizeY = 20;
+		 
+		 try {
+			model = LevelDAO.getBackground(world);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
 		 
 	}
 	

@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import contract.IEntity;
 import model.BlockEnd;
 import model.BlockVoid;
 import model.BlocWall;
@@ -27,10 +28,10 @@ public class LevelDAO extends AbstractDAO
 	 * @throws SQLException
 	 *             the SQL exception
 	 */
-	public static ArrayList<Entity> getBackground(final int id) throws SQLException 
+	public static ArrayList<IEntity> getBackground(final int id) throws SQLException 
 	{
 		final CallableStatement callStatement = prepareCall(sqlGetBackGround);
-		ArrayList<Entity> example = new ArrayList<Entity>();
+		ArrayList<IEntity> example = new ArrayList<IEntity>();
 		if (callStatement.execute()) 
 		{
 			final ResultSet result = callStatement.getResultSet();
