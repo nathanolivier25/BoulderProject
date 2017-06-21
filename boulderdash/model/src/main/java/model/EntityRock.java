@@ -17,10 +17,34 @@ public class EntityRock extends Entity{
 
 		for (int i = 0; i < test.size(); i++)
 		{
-			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
+			
+			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
 			{
-				Posy = Posy+1;
+				//If there is another rock bellow the rock, it will not move.
+				if(test.get(i).getType() == EntityType.ROCK)
+				{
+					
+				}
+				
+				//If there is a "void" bellow the rock, it will fall at the position of the void.
+				else if(test.get(i).getType() == EntityType.VOID)
+				{
+					Posy = Posy+1;
+				}
+				
+				//If there is an enemy bellow the rock, it will fall on it.
+				else if(test.get(i).getType() == EntityType.ENEMY)
+				{
+					Posy = Posy+1;
+				}
+				
+				//If there is a player bellow the rock, it will fall on it.
+				else if(test.get(i).getType() == EntityType.PLAYER)
+				{
+					Posy = Posy+1;
+				}
 			}
+			
 		}
 		return test;
 	}

@@ -18,9 +18,31 @@ public class EntityDiamond extends Entity{
 
 		for (int i = 0; i < test.size(); i++)
 		{
-			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
+			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
 			{
-				Posy = Posy+1;
+				//If there is a rock bellow the diamond, it will not move.
+				if(test.get(i).getType() == EntityType.ROCK)
+				{
+					
+				}
+				
+				//If there is a "void" bellow the diamond, it will fall at the position of the void.
+				else if(test.get(i).getType() == EntityType.VOID)
+				{
+					Posy = Posy+1;
+				}
+				
+				//If there is an enemy bellow the diamond, it will fall on it.
+				else if(test.get(i).getType() == EntityType.ENEMY)
+				{
+					Posy = Posy+1;
+				}
+				
+				//If there is a player bellow the diamond, it will fall on it.
+				else if(test.get(i).getType() == EntityType.PLAYER)
+				{
+					Posy = Posy+1;
+				}
 			}
 		}
 		return test;

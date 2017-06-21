@@ -15,9 +15,34 @@ public class EntityPlayer extends Entity{
 	
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
-		// TODO Auto-generated method stub
+		for (int i = 0; i < test.size(); i++)
+		{
+			if (order == OrderType.RIGHT)
+				{
+					
+				}
+				
+				
+				else if(order == OrderType.LEFT)
+				{
+					
+				}
+				
+				else if(order == OrderType.UP)
+				{
+					
+				}
+			
+				else if(order == OrderType.DOWN)
+				{
+					
+				}
+			
+			}
 		return test;
-	}
+}
+		
+		
 	
 	@Override
 	public int GetPosx() {
