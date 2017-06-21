@@ -43,6 +43,7 @@ public class LevelDAO extends AbstractDAO
 				int posx = result.getInt(2);
 				int posy = result.getInt(3);
 
+				
 
 				switch(result.getInt(4))
 				{

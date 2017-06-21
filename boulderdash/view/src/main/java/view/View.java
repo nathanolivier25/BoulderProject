@@ -1,7 +1,9 @@
 package view;
 
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 
@@ -34,6 +36,7 @@ public class View implements IView, KeyListener{
 		mapSizeX = 20;
 		mapSizeY = 20;
 		
+		
 		loadImage();
 	}
 	
@@ -41,8 +44,8 @@ public class View implements IView, KeyListener{
 	{
 		int startX = (windows.getSize().width-(mapSizeX *16))/2;
 		int startY = (windows.getSize().height-(mapSizeY *16))/2;
-		windows.getGraphics().clearRect(0, 0, windows.getWidth(), windows.getHeight());
 		
+		BufferedImage bimage = new BufferedImage(windows.getWidth(), windows.getHeight(), BufferedImage.TYPE_INT_ARGB);
 		
 		for  (int i = 0; i  < drawMap.size(); i++)
 		{
@@ -54,11 +57,12 @@ public class View implements IView, KeyListener{
 				{
 				
 					image.get(j).setWhereToDraw(drawMap.get(i).GetPosx()*16 + startX, drawMap.get(i).GetPosy()*16 + startY);
-					image.get(j).paintComponent(windows.getGraphics());
+					image.get(j).paintComponent(bimage.getGraphics());
 				}
 				
 			}
 		}
+		windows.getGraphics().drawImage(bimage, 0, 0, null);
 	}
 	
 	public void loadImage()
