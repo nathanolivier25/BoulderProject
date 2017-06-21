@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import contract.EntityType;
+import contract.IEntity;
 import contract.OrderType;
 
 public class BlocDirt extends Entity {
@@ -11,13 +12,12 @@ public class BlocDirt extends Entity {
 		super(Posx, Posy, EntityType.DIRT);
 	}
 
-	@Override
-	public ArrayList<Entity> Update(ArrayList<Entity> test, OrderType order) {
+	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
 		
 		for  (int i = 0; i < test.size(); i++)
 		{
-				if 	(test.get(i).getPosx() == this.getPosx() && test.get(i).getPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
+				if 	(test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
 				{
 					test.add(new BlockVoid(getPosx(), getPosy()));
 				}
