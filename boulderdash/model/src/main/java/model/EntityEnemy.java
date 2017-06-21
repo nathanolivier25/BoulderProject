@@ -3,6 +3,8 @@
  * It's defined by the following elements :
  * <ul>
  * <li>
+ * @author Group 1
+ * @version 1
  */
 package model;
 
