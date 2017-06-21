@@ -16,7 +16,7 @@ public abstract class Entity implements IEntity{
 
 	}
 
-	public EntityType getTypeID() {
+	public EntityType getType() {
 		return typeID;
 	}
 

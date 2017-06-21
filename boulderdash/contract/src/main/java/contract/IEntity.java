@@ -11,6 +11,6 @@ public interface IEntity
 	
 	public void setPosy(int posy);
 
-	public EntityType GetType();
+	public EntityType getType();
 
 }

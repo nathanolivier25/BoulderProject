@@ -18,4 +18,22 @@ public class BlockEnd extends Entity{
 		// TODO Auto-generated method stub
 		return test;
 	}
+	
+	@Override
+	public int GetPosx() {
+		// TODO Auto-generated method stub
+		return super.getPosx();
+	}
+
+	@Override
+	public int GetPosy() {
+		// TODO Auto-generated method stub
+		return super.getPosy();
+	}
+
+	@Override
+	public EntityType getType() {
+		// TODO Auto-generated method stub
+		return super.getType();
+	}
 }
