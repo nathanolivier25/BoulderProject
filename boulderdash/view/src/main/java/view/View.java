@@ -33,7 +33,7 @@ public class View implements IView, KeyListener{
 		windows.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		windows.setVisible(true);
 		
-		mapSizeX = 10;
+		mapSizeX = 20;
 		mapSizeY = 20;
 		
 		
