@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import contract.EntityType;
 import contract.OrderType;
 
-public abstract class EntityEnemy extends Entity{
+public class EntityEnemy extends Entity{
 
 	//OrderType Direction = OrderType.RIGHT;
 	
@@ -41,5 +41,22 @@ public abstract class EntityEnemy extends Entity{
 		return test;
 	}
 	
+	@Override
+	public int GetPosx() {
+		// TODO Auto-generated method stub
+		return super.getPosx();
+	}
+
+	@Override
+	public int GetPosy() {
+		// TODO Auto-generated method stub
+		return super.getPosy();
+	}
+
+	@Override
+	public EntityType getType() {
+		// TODO Auto-generated method stub
+		return super.getType();
+	}
     
 }
