@@ -43,7 +43,7 @@ public class View implements IView, KeyListener{
 				if (image.get(j).getType() == A)
 				{
 				
-					image.get(j).setWhereToDraw(drawMap.get(i).GetPosx(), drawMap.get(i).GetPosy());
+					image.get(j).setWhereToDraw(drawMap.get(i).GetPosx()*16, drawMap.get(i).GetPosy()*16);
 					image.get(j).paintComponent(windows.getGraphics());
 				}
 				
