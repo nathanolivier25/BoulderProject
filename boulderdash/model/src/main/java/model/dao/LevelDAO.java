@@ -77,9 +77,8 @@ public class LevelDAO extends AbstractDAO
 
 				}
 
-				result.close();
 			}
-			
+			result.close();
 		}
 		return example;
 	}
