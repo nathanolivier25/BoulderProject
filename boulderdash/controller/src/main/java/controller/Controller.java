@@ -18,7 +18,7 @@ public class Controller
 	{
 		this.model = model;
 		this.view = view;
-		running = false;
+		running = true;
 	}
 	
 	public void run()

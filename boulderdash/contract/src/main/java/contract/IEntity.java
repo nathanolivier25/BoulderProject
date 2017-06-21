@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 public interface IEntity 
 {
-
+	public int Posx = 0;
+	public int Posy = 0;
+	public EntityType typeID = null;
+	
+	
 	public int GetPosx();
 	
 	public void setPosx(int posx);

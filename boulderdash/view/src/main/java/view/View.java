@@ -54,14 +54,14 @@ public class View implements IView, KeyListener{
 	public void loadImage()
 	
 	{
-		image.add(new ElementSprite("74359.png",0,0,EntityType.WALL));
-		image.add(new ElementSprite("74359.png",16,0,EntityType.DIRT));
-		image.add(new ElementSprite("74359.png",32,0,EntityType.VOID));
-		image.add(new ElementSprite("74359.png",48,0,EntityType.ROCK));
-		image.add(new ElementSprite("74359.png",64,0,EntityType.DIAMOND));
-		image.add(new ElementSprite("74359.png",96,0,EntityType.END));
-		image.add(new ElementSprite("74359.png",140,0,EntityType.ENEMY));
-		image.add(new ElementSprite("74359.png",48,224,EntityType.PLAYER));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",0,0,EntityType.WALL));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",16,0,EntityType.DIRT));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",32,0,EntityType.VOID));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",48,0,EntityType.ROCK));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",64,0,EntityType.DIAMOND));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",96,0,EntityType.END));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74359.png",140,0,EntityType.ENEMY));
+		image.add(new ElementSprite("D:\\EXiA\\A1\\Projet\\Projet 6 - Java\\Imges\\74336.png",48,224,EntityType.PLAYER));
 				
 	}
 	

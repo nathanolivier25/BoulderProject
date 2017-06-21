@@ -13,7 +13,9 @@ public abstract class Entity implements IEntity{
 	public EntityType typeID;
 
 	public Entity(int Posx, int Posy, EntityType typeID) {
-
+		this.Posx = Posx;
+		this.Posy = Posy;
+		this.typeID = typeID;
 	}
 
 	public EntityType getType() {
