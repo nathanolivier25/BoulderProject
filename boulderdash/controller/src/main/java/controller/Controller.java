@@ -37,13 +37,9 @@ public class Controller
 			
 			if(model.isLost() == true || model.isVictory() == true)
 				running = false;
+			
+			
 					
-			try {
-				Thread.sleep(50);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 	}
 }
