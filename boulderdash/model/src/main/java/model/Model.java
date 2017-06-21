@@ -30,7 +30,7 @@ public class Model implements IModel{
 	public void Update(OrderType order)
 	{
 		for(int i = 0; i <model.size(); i++)
-			model.get(i).Update
+			model = model.get(i).Update(model, order);
 		
 		
 	}

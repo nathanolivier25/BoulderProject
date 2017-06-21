@@ -2,7 +2,6 @@ package contract;
 
 import java.util.ArrayList;
 
-import model.Entity;
 
 public interface IEntity 
 {
