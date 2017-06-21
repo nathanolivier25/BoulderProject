@@ -14,7 +14,7 @@ public class Model implements IModel{
 
 	private ArrayList <IEntity> model;
 	
-	public void model(int world) 
+	public Model(int world) 
 	{
 		 
 		 try {
