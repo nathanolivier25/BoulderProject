@@ -1,8 +1,8 @@
 package contract;
 /**
- * L'interface IModel  est une interface qui permet d'appeler des methode abstraite 
- * de la classe Model
- * @author Groupe 1
+ * the IModel interface is an interface that call abstract method.
+ *
+ * @author Group 1
  * @version 1
  */
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package contract;
 /**
- * OrderType est une énumération qui contient l'order que je personnage doit realiser
- * @author Groupe 1
+ * OrderType is an enumeration that contain all the movement orders that the character has.
+ * @author Group 1
  * @version 1
  */
 public enum OrderType {
