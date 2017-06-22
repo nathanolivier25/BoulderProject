@@ -41,7 +41,9 @@ public class View implements IView, KeyListener{
 	private int mapSizeX;
 	private int mapSizeY;
 	/**
-	 * la
+	 * <b> Constructeur de View <b>
+	 *  construit la vue du projet boulderdash
+	 *  
 	 */
 	public View()
 	{
@@ -62,6 +64,13 @@ public class View implements IView, KeyListener{
 		loadImage();
 	}
 
+	/**
+	 * La méthode DrawMap 
+	 * @param drawMap
+	 * 
+	 * Dessiner la map, pour cela on récupère les images a afficher la l'attribut image, puis on les place sur les map
+	 * 
+	 */
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
 		int startX = (windows.getSize().width-(mapSizeX *16))/2;
@@ -105,21 +114,26 @@ public class View implements IView, KeyListener{
 
 		windows.getGraphics().drawImage(bimage, 0, 0, null);
 	}
+	/**
+	 * la méthode loadimage permet de récupérer les coordonées des différentelement sprite dans le fichier image 
+	 */
 
 	public void loadImage()
 
 	{
-		image.add(new ElementSprite("74359.png",0,0,EntityType.WALL));
-		image.add(new ElementSprite("74359.png",16,0,EntityType.DIRT));
-		image.add(new ElementSprite("74359.png",32,0,EntityType.VOID));
-		image.add(new ElementSprite("74359.png",48,0,EntityType.ROCK));
-		image.add(new ElementSprite("74359.png",64,0,EntityType.DIAMOND));
-		image.add(new ElementSprite("74359.png",96,0,EntityType.END));
-		image.add(new ElementSprite("74359.png",134,0,EntityType.ENEMY));
-		image.add(new ElementSprite("74336.png",48,224,EntityType.PLAYER));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",0,0,EntityType.WALL));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",16,0,EntityType.DIRT));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",32,0,EntityType.VOID));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",48,0,EntityType.ROCK));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",64,0,EntityType.DIAMOND));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",96,0,EntityType.END));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74359.png",144,0,EntityType.ENEMY));
+		image.add(new ElementSprite("D:\\EXIA\\UE6\\PROJET\\SPRITE\\74336.png",48,224,EntityType.PLAYER));
 
 	}
-
+	/**
+	 * la méthode keyPressed est la méthode qui permet de récupérer l'appuie d'une touche sur le clavier
+	 */
 	public void keyPressed(KeyEvent e)
 	{
 		switch (e.getKeyCode())
@@ -139,20 +153,26 @@ public class View implements IView, KeyListener{
 		default:
 			break;
 		}
-
-	} 
+	}
+	/**
+	 * la méthode KeyReleased sert a voir quand une touche est appuiyer 
+	 */
 	public void keyReleased(KeyEvent e)
 	{
 		lastOrder = null; 
 	}
-
+	/**
+	 * OrderType donne un order
+	 * @return lastOrder
+	 */
 	public OrderType GetOrder()
 	{
 		return lastOrder;
 
 	}
-
-	@Override
+	/**
+	 * keyTyped n'est pas utiliser
+	 */
 	public void keyTyped(KeyEvent arg0) 
 	{
 
