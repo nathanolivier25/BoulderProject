@@ -6,15 +6,37 @@ import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 
+/**
+ * EntityRock is the class that define the "behavior" of our rocks.
+ * Since it's an Entity, it extends the Entity class.
+ * 
+ * It's defined by the following elements :
+ * <ul>
+ * <li>
+ * @author Group 1
+ * @version 1
+ */
+
 public class EntityRock extends Entity{
 
+	/**
+	 * Constructor.
+	 * 
+	 * @param Posx The position in x of the rock.
+	 * @param Poxy The position in y of the rock.
+	 */
 	public EntityRock(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.ROCK);
 	}
 
-	
+	/**
+	 * 
+	 */
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
+		/**
+		 * 
+		 */
 		for (int i = 0; i < test.size(); i++)
 		{
 			
