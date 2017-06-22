@@ -15,6 +15,14 @@ public class ElementSprite
 	private int drawx;
 	private int drawy;
 	private EntityType id;
+/**	
+	* @param x the X coordinate of the upper-left corner of the
+	*          specified rectangular region
+	* @param y the Y coordinate of the upper-left corner of the
+	*          specified rectangular region
+	* @param w the width of the specified rectangular region
+	* @param h the height of the specified rectangular region
+	* */
 	
 	public ElementSprite(String path, int x1, int y1, EntityType type)
 	{
