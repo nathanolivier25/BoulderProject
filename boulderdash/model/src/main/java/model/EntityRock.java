@@ -23,6 +23,7 @@ public class EntityRock extends Entity{
 	 * Constructor.
 	 * 
 	 * @param Posx The position in x of the rock.
+	 * 
 	 * @param Poxy The position in y of the rock.
 	 */
 	public EntityRock(int Posx, int Posy) {
