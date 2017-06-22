@@ -153,6 +153,7 @@ public class View implements IView, KeyListener{
 	}
 	/**
 	 * The keyReleased method is used to know when we release a key on the keyboard.
+	 * @param e
 	 */
 	public void keyReleased(KeyEvent e)
 	{
@@ -170,6 +171,7 @@ public class View implements IView, KeyListener{
 	/**
 	 * The keyTyped method comes from the interface KeyListener.
 	 * It's not used here.
+	 * @param arg0
 	 */
 	public void keyTyped(KeyEvent arg0) 
 	{
