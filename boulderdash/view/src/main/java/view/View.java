@@ -12,7 +12,7 @@ import contract.IEntity;
 import contract.IView;
 /** 
  * View is the class allowing to display the windows and load a picture. 
- * The class allow key management to move a player.
+ * The class allows key management to move a player.
  * 
  * <ul> 
  * <li> Here are all our pictures<li>
@@ -23,7 +23,7 @@ import contract.IView;
  * @version 1
  */
 /**
- * This class use the IViewand KeyListener interface
+ * This class uses the IView and KeyListener interface.
  */
 public class View implements IView, KeyListener{
 	/**
@@ -65,7 +65,7 @@ public class View implements IView, KeyListener{
 	 * DrawMap Method
 	 * @param drawMap
 	 * 
-	 * It take the pictures then draw them on the map
+	 * It takes the pictures then draw them on the map
 	 */
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
@@ -129,7 +129,7 @@ public class View implements IView, KeyListener{
 
 	}
 	/**
-	 * They keyPressed method is the on that give the order to move when we press our keyboard.
+	 * The keyPressed method is the one that give the order to move when we press our keyboard.
 	 */
 	public void keyPressed(KeyEvent e)
 	{
@@ -152,14 +152,14 @@ public class View implements IView, KeyListener{
 		}
 	}
 	/**
-	 * The keyReleased method is use to know when we release a key on the keyboard.
+	 * The keyReleased method is used to know when we release a key on the keyboard.
 	 */
 	public void keyReleased(KeyEvent e)
 	{
 		lastOrder = null; 
 	}
 	/**
-	 * OrderType give a movement order.
+	 * OrderType gives a movement order.
 	 * @return lastOrder
 	 */
 	public OrderType GetOrder()
