@@ -1,20 +1,5 @@
-/** 
- * View is the class allowing to display the windows and load a picture. 
- * The class allow key management to move a player
- * 
- * <ul> 
- * <li> Contient la liste des image<li>
- * <li> Permet d'afficher la fenetre du jeux <li>
- * <li> Stocke le dernier ordre exécuter sur le clavier <li>
- * <li> Contient la taille de la map <li>
- * @author Groupe 1
- * @version 1
- */
 package view;
-/**
- * import des différentes classe utiliser pour l'utilisation 
- * */
-import java.awt.Graphics2D;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
@@ -25,15 +10,27 @@ import contract.OrderType;
 import contract.EntityType;
 import contract.IEntity;
 import contract.IView;
+/** 
+ * View is the class allowing to display the windows and load a picture. 
+ * The class allow key management to move a player.
+ * 
+ * <ul> 
+ * <li> Here are all our pictures<li>
+ * <li> Allow to display the game <li>
+ * <li> Take in memory the last movement order <li>
+ * <li> Contain the map size <li>
+ * @author Group 1
+ * @version 1
+ */
 /**
- * Classe view implemente l'interface IView et KeyListener
+ * This class use the IViewand KeyListener interface
  */
 public class View implements IView, KeyListener{
 	/**
-	 * image est de type ArrayListe<ElementSprite> 
-	 * windows est de type JFrame 
-	 * lasterOrder est de type OrderType
-	 * mapSizeX, mapSizeY sont de type int 
+	 * image in an ArrayListe<ElementSprite> 
+	 * windows is a JFrame 
+	 * lasterOrder in an  OrderType
+	 * mapSizeX, mapSizeY are int 
 	 */
 	private ArrayList <ElementSprite> image;
 	private JFrame windows;
@@ -41,8 +38,8 @@ public class View implements IView, KeyListener{
 	private int mapSizeX;
 	private int mapSizeY;
 	/**
-	 * <b> Constructeur de View <b>
-	 *  construit la vue du projet boulderdash
+	 * <b> View's constructor <b>
+	 * 
 	 *  
 	 */
 	public View()
@@ -65,11 +62,10 @@ public class View implements IView, KeyListener{
 	}
 
 	/**
-	 * La méthode DrawMap 
+	 * DrawMap Method
 	 * @param drawMap
 	 * 
-	 * Dessiner la map, pour cela on récupère les images a afficher la l'attribut image, puis on les place sur les map
-	 * 
+	 * It take the pictures then draw them on the map
 	 */
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
@@ -115,7 +111,7 @@ public class View implements IView, KeyListener{
 		windows.getGraphics().drawImage(bimage, 0, 0, null);
 	}
 	/**
-	 * la méthode loadimage permet de récupérer les coordonées des différentelement sprite dans le fichier image 
+	 * loadImage is used to take the localization of all sprite in the picture files.
 	 */
 
 	public void loadImage()
@@ -133,7 +129,7 @@ public class View implements IView, KeyListener{
 
 	}
 	/**
-	 * la méthode keyPressed est la méthode qui permet de récupérer l'appuie d'une touche sur le clavier
+	 * They keyPressed method is the on that give the order to move when we press our keyboard.
 	 */
 	public void keyPressed(KeyEvent e)
 	{
@@ -156,14 +152,14 @@ public class View implements IView, KeyListener{
 		}
 	}
 	/**
-	 * la méthode KeyReleased sert a voir quand une touche est appuiyer 
+	 * The keyReleased method is use to know when we release a key on the keyboard.
 	 */
 	public void keyReleased(KeyEvent e)
 	{
 		lastOrder = null; 
 	}
 	/**
-	 * OrderType donne un order
+	 * OrderType give a movement order.
 	 * @return lastOrder
 	 */
 	public OrderType GetOrder()
@@ -172,7 +168,8 @@ public class View implements IView, KeyListener{
 
 	}
 	/**
-	 * keyTyped n'est pas utiliser
+	 * The keyTyped method comes from the interface KeyListener.
+	 * It's not used here.
 	 */
 	public void keyTyped(KeyEvent arg0) 
 	{
