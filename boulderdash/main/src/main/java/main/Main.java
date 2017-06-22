@@ -21,8 +21,6 @@ public abstract class Main {
      *            the argument
      */
     public static void main(final String[] args) {
-    	File t = new File(".");
-    	System.out.println(t.getAbsolutePath());
         final Controller controller = new Controller(new Model(2), new View());
         controller.run();
     }

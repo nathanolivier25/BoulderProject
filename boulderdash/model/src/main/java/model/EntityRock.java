@@ -22,7 +22,8 @@ public class EntityRock extends Entity{
 			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
 			{
 				//If there is something else than an empty place downside the rock won't fall
-				if((test.get(i).getType() != EntityType.VOID) || (test.get(i).getType() !=EntityType.PLAYER))
+				EntityType temp = test.get(i).getType();
+				if((temp != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
 				{
 					canFall = false;
 				}
@@ -31,7 +32,6 @@ public class EntityRock extends Entity{
 			}
 
 		} 	
-		
 		
 		if(canFall)
 		{
