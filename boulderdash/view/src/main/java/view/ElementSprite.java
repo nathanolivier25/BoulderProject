@@ -39,15 +39,15 @@ public class ElementSprite
 		
 	}
 	/**
-	 * Methode paintComponent que lon surcharge qui permet de dessiner sur la fenetre
-	 * @param g varaible qui contient la partie graphique de la fenetre
+	 * The paintComponent method draw the map on the frame.q
+	 * @param g is a variable that contain the graphics par of the frame.
 	 */
 	public void paintComponent(Graphics g) 
 	{
 		g.drawImage(buffer, drawx, drawy, null);
 	}
 	/**
-	 * la methode régle  ou il faut déssiner 
+	 * This method say where we need to draw the map.
 	 * @param x
 	 * @param y
 	 */
@@ -58,8 +58,8 @@ public class ElementSprite
 	}
 	
 	/**
-	 * la methode donne le type d'entité a fournir. 
-	 * @return il retourne id de l'entité
+	 * This method give what object is needed to draw. 
+	 * @return the object ID.
 	 */
 	public EntityType getType()
 	{
