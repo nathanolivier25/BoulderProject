@@ -33,6 +33,7 @@ public class EntityPlayer extends Entity{
 					if 	(test.get(i).GetPosx() == this.getPosx()+2 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID)
 					{
 						Posx = Posx +1;
+						
 					}
 				}
 	
