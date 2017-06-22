@@ -1,5 +1,7 @@
 package main;
 
+import java.io.File;
+
 import controller.Controller;
 import model.Model;
 import view.View;
@@ -19,6 +21,8 @@ public abstract class Main {
      *            the argument
      */
     public static void main(final String[] args) {
+    	File t = new File(".");
+    	System.out.println(t.getAbsolutePath());
         final Controller controller = new Controller(new Model(5), new View());
         controller.run();
     }
