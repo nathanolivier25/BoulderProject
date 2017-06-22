@@ -1,5 +1,6 @@
 package model;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import contract.EntityType;
@@ -19,23 +20,67 @@ public class EntityPlayer extends Entity{
 		{
 			if (order == OrderType.RIGHT)
 				{
-					
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIRT || test.get(i).getType() == EntityType.VOID || test.get(i).getType() == EntityType.END)
+				{
+					Posx = Posx +1;
+				}
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIAMOND)
+				{
+					Posx = Posx +1;
+				}
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.ROCK)
+				{
+					if 	(test.get(i).GetPosx() == this.getPosx()+2 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID)
+					{
+						Posx = Posx +1;
+					}
+				}
+	
 				}
 				
 				
 				else if(order == OrderType.LEFT)
 				{
-					
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIRT || test.get(i).getType() == EntityType.VOID || test.get(i).getType() == EntityType.END)
+				{
+					Posx = Posx -1;
+				}
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIAMOND)
+				{
+					Posx = Posx -1;
+				}
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.ROCK)
+				{
+					if 	(test.get(i).GetPosx() == this.getPosx()+2 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID)
+					{
+						Posx = Posx -1;
+					}
+				}
+	
 				}
 				
 				else if(order == OrderType.UP)
 				{
-					
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIRT || test.get(i).getType() == EntityType.VOID || test.get(i).getType() == EntityType.END)
+				{
+					Posy = Posy +1;
+				}
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIAMOND)
+				{
+					Posy = Posy +1;
+				}
 				}
 			
 				else if(order == OrderType.DOWN)
 				{
-					
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIRT || test.get(i).getType() == EntityType.VOID || test.get(i).getType() == EntityType.END)
+				{
+					Posy = Posy -1;
+				}
+				if 	(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.DIAMOND)
+				{
+					Posy = Posy -1;
+				}
 				}
 			
 			}

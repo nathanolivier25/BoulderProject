@@ -14,13 +14,11 @@ public class BlocDirt extends Entity {
 
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
-		
-		for  (int i = 0; i < test.size(); i++)
-		{
-				if 	(test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
-				{
-					test.add(new BlockVoid(getPosx(), getPosy()));
-				}
+		for (int i = 0; i < test.size(); i++) {
+			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()
+					&& test.get(i).getType() == EntityType.PLAYER) {
+				test.add(new BlockVoid(getPosx(), getPosy()));
+			}
 		}
 		// TODO Auto-generated method stub
 		return test;
