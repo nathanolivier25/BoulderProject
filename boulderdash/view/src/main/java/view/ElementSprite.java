@@ -38,17 +38,29 @@ public class ElementSprite
         }
 		
 	}
-	
+	/**
+	 * Methode paintComponent que lon surcharge qui permet de dessiner sur la fenetre
+	 * @param g varaible qui contient la partie graphique de la fenetre
+	 */
 	public void paintComponent(Graphics g) 
 	{
 		g.drawImage(buffer, drawx, drawy, null);
 	}
+	/**
+	 * la methode régle  ou il faut déssiner 
+	 * @param x
+	 * @param y
+	 */
 	public void setWhereToDraw(int x, int y)
 	{
 		drawx = x;
 		drawy = y;
 	}
 	
+	/**
+	 * la methode donne le type d'entité a fournir. 
+	 * @return il retourne id de l'entité
+	 */
 	public EntityType getType()
 	{
 		return id;
