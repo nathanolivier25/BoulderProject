@@ -23,7 +23,21 @@ public class EntityRock extends Entity{
 				//If there is another rock bellow the rock, it will not move.
 				if(test.get(i).getType() == EntityType.ROCK)
 				{
+					//If there is another rock bellow the rock AND if there is a void on the right of the first rock AND on the right of the second rock,
+					//The first rock will fall on the right of the other rock.
+					if(test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID && test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
+					{
+						Posx = Posx+1;
+						Posy = Posy+1;
+					}
 					
+					//If there is another rock bellow the rock AND if there is a void on the left of the first rock AND on the left of the second rock,
+					//The first rock will fall on the left of the other rock.
+					if (test.get(i).GetPosx() == this.getPosx()-1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID && test.get(i).GetPosx() == this.getPosx()-1 && test.get(i).GetPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
+					{
+						Posx = Posx-1;
+						Posy = Posy-1;
+					}
 				}
 				
 				//If there is a "void" bellow the rock, it will fall at the position of the void.
@@ -43,11 +57,13 @@ public class EntityRock extends Entity{
 				{
 					Posy = Posy+1;
 				}
+				
 			}
-			
-		}
+
+		} 	
 		return test;
-	}
+	
+		}
 	
 	@Override
 	public int GetPosx() {
