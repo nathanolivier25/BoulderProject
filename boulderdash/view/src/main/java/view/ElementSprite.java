@@ -16,6 +16,7 @@ public class ElementSprite
 	private int drawy;
 	private EntityType id;
 /**	
+	* @method getSubimage
 	* @param x the X coordinate of the upper-left corner of the
 	*          specified rectangular region
 	* @param y the Y coordinate of the upper-left corner of the
