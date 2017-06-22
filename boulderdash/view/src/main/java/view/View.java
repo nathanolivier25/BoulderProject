@@ -179,9 +179,6 @@ public class View implements IView, KeyListener{
 
 
 	}
-
-
-
 }
 
 
