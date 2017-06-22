@@ -37,7 +37,10 @@ public class ElementSprite
         }
 		
 	}
-	
+	/**
+	 * 
+	 * @param g
+	 */
 	public void paintComponent(Graphics g) 
 	{
 		g.drawImage(buffer, drawx, drawy, null);
