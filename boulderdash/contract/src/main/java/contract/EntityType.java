@@ -1,6 +1,6 @@
 /**
- * C'est une énumération qui sert a stocker les entités présent dans notre jeux
- * @author Groupe 1
+ * There are all our entities that will be in the game
+ * @author Group 1
  * @version 1
  */
 package contract;

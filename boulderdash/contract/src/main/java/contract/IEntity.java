@@ -1,8 +1,7 @@
 package contract;
 /**
- * IEntity est une interface qui permet d'appeler des methode abstraite 
- * de la classe Entity
- * @author Groupe 1
+ * IEntity is an interface that call abstract methods.
+ * @author Group 1
  * @version 1
  */
 import java.util.ArrayList;
@@ -11,9 +10,9 @@ import java.util.ArrayList;
 public interface IEntity 
 {
 	/**
-	 * Posx est de type int et prend la valeur 0
-	 * Posy est de type int et prend la valeur 0
-	 *typeID est de type EntityType et prend la valeur null 
+	 * Posx is an int and is initiate at 0.
+	 * Posy is an int and is initiate at 0.
+	 * typeID is an EntityType and is initiate at null.
 	 */
 	public int Posx = 0;
 	public int Posy = 0;
