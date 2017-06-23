@@ -13,7 +13,6 @@ public class EntityRock extends Entity{
 	}
 
 	
-	
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
 		boolean canFall = true;
