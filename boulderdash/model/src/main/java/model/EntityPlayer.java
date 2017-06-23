@@ -8,6 +8,15 @@ import contract.OrderType;
 public class EntityPlayer extends Entity {
 	
 	public int Score = 0;
+	public int getScore() {
+		
+		return Score;
+	}
+
+	public void setScore(int score) {
+		Score = score;
+	}
+
 	public EntityPlayer(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.PLAYER);
 	}
