@@ -18,7 +18,7 @@ public class BlocWall extends Entity{
 	 * @param Posy Vertical location for the BlockWall.
 	 */
 	public BlocWall(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.WALL);
+		super(Posx, Posy, EntityType.WALL,100);
 	}
 
 	

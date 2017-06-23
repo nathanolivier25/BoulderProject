@@ -20,7 +20,7 @@ public class EntityEnemy extends Entity{
 	 * @param Posy Vertical location for the EntityEnemy.
 	 */
 	public EntityEnemy(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.ENEMY);
+		super(Posx, Posy, EntityType.ENEMY,500);
 		previousSide = OrderType.UP;
 	}
 	
@@ -45,10 +45,7 @@ public class EntityEnemy extends Entity{
 				if(canmove)
 					Posy = Posy - 1;
 				else
-				{
 					this.previousSide = OrderType.RIGHT;
-					System.out.println("up");
-				}
 			}
 			else if (previousSide == OrderType.DOWN) {
 				boolean canmove = true;
@@ -66,10 +63,8 @@ public class EntityEnemy extends Entity{
 				if(canmove)
 					Posy = Posy + 1;
 					else
-					{
 						this.previousSide = OrderType.LEFT;
-						System.out.println("down");
-					}
+
 			}
 			else if (previousSide == OrderType.LEFT) {
 				boolean canmove = true;
@@ -88,10 +83,8 @@ public class EntityEnemy extends Entity{
 				if(canmove)
 					Posx = Posx - 1;
 					else
-					{
 						this.previousSide = OrderType.UP;
-						System.out.println("left");
-					}
+
 			}
 			else  {
 				boolean canmove = true;
@@ -109,10 +102,7 @@ public class EntityEnemy extends Entity{
 				if(canmove)
 					Posx = Posx + 1;
 					else
-					{
 						this.previousSide = OrderType.DOWN;
-						System.out.println("right");
-					}
 			}
 
 	

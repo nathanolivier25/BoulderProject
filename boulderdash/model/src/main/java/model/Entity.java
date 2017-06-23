@@ -11,12 +11,32 @@ public abstract class Entity implements IEntity{
 	public int Posx;
 	public int Posy;
 	public EntityType typeID;
+	public long timeMillisAtRestart;
+	public long millisUntilUpdate;
 
-	public Entity(int Posx, int Posy, EntityType typeID) {
+
+	public Entity(int Posx, int Posy, EntityType typeID,long millisBeforeUpdate) {
 		this.Posx = Posx;
 		this.Posy = Posy;
 		this.typeID = typeID;
+		this.millisUntilUpdate = millisBeforeUpdate;
 	}
+
+	public void restartClock()
+	{
+		timeMillisAtRestart = System.currentTimeMillis();
+	}
+
+	public boolean canExec()
+	{
+		long t = System.currentTimeMillis() - timeMillisAtRestart;
+		if(t<millisUntilUpdate)
+			return false;
+		else
+			return true;
+	}
+
+
 
 	public EntityType getType() {
 		return typeID;
@@ -45,3 +65,6 @@ public abstract class Entity implements IEntity{
 	}
 
 }
+
+
+
