@@ -47,8 +47,8 @@ public class ElementSprite
 	}
 	/**
 	 * This method says where we need to draw the map.
-	 * @param x that's the horizontal location in the arraylist
-	 * @param y that's the vertical location in the arraylist
+	 * @param x that's the horizontal location in the arraylist.
+	 * @param y that's the vertical location in the arraylist.
 	 */
 	public void setWhereToDraw(int x, int y)
 	{
