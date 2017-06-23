@@ -38,8 +38,9 @@ public class View implements IView, KeyListener{
 	private int mapSizeY;
 	/**
 	 * View's constructor 
+	 * setTitle That's the name of our game.
+	 * setSize is the windows size.
 	 * 
-	 *  
 	 */
 	public View()
 	{
