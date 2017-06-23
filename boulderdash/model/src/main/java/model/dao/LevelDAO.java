@@ -28,6 +28,11 @@ public class LevelDAO extends AbstractDAO
 	 * @throws SQLException
 	 *             the SQL exception
 	 */
+	/**
+	 * @param id it's the world ID.
+	 * @return it close the link between our datas and the program.
+	 * @throws SQLException it's an error exception.
+	 */
 	public static ArrayList<IEntity> getBackground(final int id) throws SQLException 
 	{
 		final CallableStatement callStatement = prepareCall(sqlGetBackGround);

@@ -38,7 +38,7 @@ public class View implements IView, KeyListener{
 	private int mapSizeX;
 	private int mapSizeY;
 	/**
-	 * <b> View's constructor <b>
+	 * View's constructor 
 	 * 
 	 *  
 	 */
@@ -66,7 +66,7 @@ public class View implements IView, KeyListener{
 
 	/**
 	 * DrawMap Method
-	 * @param drawMap
+	 * @param drawMap that's the name of our arrayList.
 	 * 
 	 * It takes the pictures then draw them on the map
 	 */
@@ -156,7 +156,7 @@ public class View implements IView, KeyListener{
 	}
 	/**
 	 * The keyReleased method is used to know when we release a key on the keyboard.
-	 * @param e
+	 * @param e return an error.
 	 */
 	public void keyReleased(KeyEvent e)
 	{
@@ -174,7 +174,7 @@ public class View implements IView, KeyListener{
 	/**
 	 * The keyTyped method comes from the interface KeyListener.
 	 * It's not used here.
-	 * @param arg0
+	 * @param arg0 it's an argument.
 	 */
 	public void keyTyped(KeyEvent arg0) 
 	{
