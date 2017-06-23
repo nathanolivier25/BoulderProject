@@ -30,7 +30,6 @@ public class EntityTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
 	@Test
 	public void testGetType() {
 		EntityType typeTest = EntityType.DIAMOND;
