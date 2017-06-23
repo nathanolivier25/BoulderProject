@@ -14,7 +14,6 @@ import contract.IView;
 /** 
  * View is the class allowing to display the windows and load a picture. 
  * The class allows key management to move a player.
- * 
  * <ul> 
  * <li> Here are all our pictures<li>
  * <li> Allow to display the game <li>
