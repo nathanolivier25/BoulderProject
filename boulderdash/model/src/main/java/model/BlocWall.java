@@ -6,6 +6,12 @@ import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 
+/**
+ * BlocDirt is the class that define the "behavior" of our rocks.
+ * 
+ * @author Group 1
+ * @version 1
+ */
 public class BlocWall extends Entity{
 	/**
 	 * @param Posx Horizontal location for the BlockWall.

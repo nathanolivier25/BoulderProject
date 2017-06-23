@@ -6,6 +6,13 @@ import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 
+/**
+ * EntityDiamond is the class that define the "behavior" of our diamonds.
+ * 
+ * @author Group 1
+ * @version 1
+ */
+
 public class EntityDiamond extends Entity{
 
 	/**
@@ -16,8 +23,10 @@ public class EntityDiamond extends Entity{
 		super(Posx, Posy, EntityType.DIAMOND);
 	}
 
-	// Falling diamond.
-	
+	/**
+	 * The diamond can't fall if there are a void AND a player below it.
+	 * Otherwise, it will fall.
+	 */
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
 			boolean canFall = true;
@@ -26,7 +35,6 @@ public class EntityDiamond extends Entity{
 			{
 				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
 				{
-					//If there is something else than an empty place below the diamond won't fall
 					EntityType temp = test.get(i).getType();
 					if((temp != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
 					{

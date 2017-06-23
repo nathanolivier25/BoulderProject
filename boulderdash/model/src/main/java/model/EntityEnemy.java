@@ -1,11 +1,3 @@
-/**
- * EntityEnemy is the class that define the behavior of our enemies
- * It's defined by the following elements :
- * <ul>
- * <li>
- * @author Group 1
- * @version 1
- */
 package model;
 
 import java.util.ArrayList;
@@ -14,9 +6,15 @@ import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 
+/**
+ * EntityEnemy is the class that define the behavior of our enemies
+ * It's defined by the following elements :
+ * <ul>
+ * <li>
+ * @author Group 1
+ * @version 1
+ */
 public class EntityEnemy extends Entity{
-
-	//OrderType Direction = OrderType.RIGHT;
 	
 	/**
 	 * @param Posx Horizontal location for the EntityEnemy.
