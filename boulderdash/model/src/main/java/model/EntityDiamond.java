@@ -23,6 +23,7 @@ public class EntityDiamond extends Entity{
 		super(Posx, Posy, EntityType.DIAMOND);
 	}
 
+	
 	/**
 	 * The diamond can't fall if there are a void AND a player below it.
 	 * Otherwise, it will fall.
