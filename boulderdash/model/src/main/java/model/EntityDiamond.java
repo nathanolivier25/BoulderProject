@@ -16,35 +16,23 @@ public class EntityDiamond extends Entity{
 	
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
-		for (int i = 0; i < test.size(); i++)
-		{
-			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
+			boolean canFall = true;
+			for (int i = 0; i < test.size(); i++)
 			{
-				//If there is a rock bellow the diamond, it will not move.
-				if(test.get(i).getType() == EntityType.ROCK)
+				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
 				{
-					
+					//If there is something else than an empty place below the diamond won't fall
+					EntityType temp = test.get(i).getType();
+					if((temp != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
+					{
+						canFall = false;
+					}	
 				}
-				
-				//If there is a "void" bellow the diamond, it will fall at the position of the void.
-				else if(test.get(i).getType() == EntityType.VOID)
-				{
-					Posy = Posy+1;
-				}
-				
-				//If there is an enemy bellow the diamond, it will fall on it.
-				else if(test.get(i).getType() == EntityType.ENEMY)
-				{
-					Posy = Posy+1;
-				}
-				
-				//If there is a player bellow the diamond, it will fall on it.
-				else if(test.get(i).getType() == EntityType.PLAYER)
-				{
-					Posy = Posy+1;
-				}
-			}
-		}
+			} 		
+			if(canFall)
+			{
+				Posy = Posy + 1;
+			}	
 		return test;
 	}
 	
