@@ -42,7 +42,7 @@ public class View implements IView, KeyListener{
 	 * setSize is the windows size.
 	 * 
 	 */
-	public View()
+	public View(int world)
 	{
 		this.image = new ArrayList <ElementSprite>();
 		this.lastOrder = null;

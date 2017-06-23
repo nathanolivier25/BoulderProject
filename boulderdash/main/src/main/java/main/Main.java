@@ -20,8 +20,10 @@ public abstract class Main {
      *            the argument
      */
     public static void main(final String[] args) {
-    	View v = new View();
-        final Controller controller = new Controller(new Model(5), v);
+    	int world = 5;
+    	
+    	View v = new View(world);
+        final Controller controller = new Controller(new Model(world), v);
         controller.run();
         v.close();
     }
