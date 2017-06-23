@@ -11,13 +11,13 @@ import contract.OrderType;
 public class EntityPlayer extends Entity {
 
 	public int Score = 0;
-	
+
 	public EntityPlayer(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.PLAYER);
 	}
-	
+
 	public int getScore() {
-		
+
 		return Score;
 	}
 
@@ -42,22 +42,132 @@ public class EntityPlayer extends Entity {
 					}
 				}
 			}
-			
+
 		}
+
+		//void dirt diamond
+
 		if (order == OrderType.RIGHT) {
-			Posx = Posx + 1;
+			boolean canmove = true;
+
+			for (int i = 0; i < test.size(); i++) 
+			{
+				if (test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy())
+				{
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					{
+						if(test.get(i).getType() == EntityType.ROCK)
+						{
+							boolean canrockmove = true;
+							for (int j = 0; j < test.size(); j++) 
+							{
+								if (test.get(j).GetPosx() == this.getPosx()+2 && test.get(j).GetPosy() == this.getPosy())
+								{
+									if(test.get(j).getType() != EntityType.VOID)
+									{
+										canrockmove = false;
+									}
+								}
+							}
+							if(canrockmove)
+							{
+								test.get(i).setPosx(test.get(i).GetPosx() + 1);
+							}
+							else
+								canmove = false;	
+						}
+						else
+							canmove = false;
+					}
+				}
+			}
+			if(canmove)
+				Posx = Posx + 1;
 		}
+
+
+
+
+
+
 
 		if (order == OrderType.LEFT) {
-			Posx = Posx - 1;
-		}
-		if (order == OrderType.UP) {
-			Posy = Posy - 1;
+			boolean canmove = true;
+
+			for (int i = 0; i < test.size(); i++) 
+			{
+				if (test.get(i).GetPosx() == this.getPosx()-1 && test.get(i).GetPosy() == this.getPosy())
+				{
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					{
+						if(test.get(i).getType() == EntityType.ROCK)
+						{
+							boolean canrockmove = true;
+							for (int j = 0; j < test.size(); j++) 
+							{
+								if (test.get(j).GetPosx() == this.getPosx()-2 && test.get(j).GetPosy() == this.getPosy())
+								{
+									if(test.get(j).getType() != EntityType.VOID)
+									{
+										canrockmove = false;
+									}
+								}
+							}
+							if(canrockmove)
+							{
+								test.get(i).setPosx(test.get(i).GetPosx() - 1);
+							}
+							else
+								canmove = false;	
+						}
+						else
+							canmove = false;
+					}
+				}
+			}
+			if(canmove)
+				Posx = Posx - 1;
 		}
 
-		if (order == OrderType.DOWN) {
-			Posy = Posy + 1;
+
+
+		if (order == OrderType.UP) {
+			boolean canmove = true;
+
+			for (int i = 0; i < test.size(); i++) 
+			{
+				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() - 1)
+				{
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					{
+						canmove = false;
+					}
+				}
+			}
+			if(canmove)
+				Posy = Posy - 1;
 		}
+		
+		
+		
+		if (order == OrderType.DOWN) {
+			boolean canmove = true;
+
+			for (int i = 0; i < test.size(); i++) 
+			{
+				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() + 1)
+				{
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					{
+						canmove = false;
+					}
+				}
+			}
+			if(canmove)
+				Posy = Posy + 1;
+		}		
+
+
 		return test;
 	}
 
