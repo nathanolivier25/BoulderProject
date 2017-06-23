@@ -59,6 +59,9 @@ public class View implements IView, KeyListener{
 
 
 		loadImage();
+		
+		windows.addKeyListener(this);
+		windows.requestFocus();
 	}
 
 	/**
@@ -178,6 +181,8 @@ public class View implements IView, KeyListener{
 
 
 	}
+	
+	
 }
 
 
