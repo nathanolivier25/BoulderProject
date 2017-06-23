@@ -1,11 +1,14 @@
 package contract;
+
+import java.util.ArrayList;
+
 /**
- * L'interface IView est une interface qui permet d'appeler des methode abstraite 
- * de la classe View
+ * The IView interface is used to call the abstract methods
+ * from the View class.
+ * 
  * @author Groupe 1
  * @version 1
  */
-import java.util.ArrayList;
 public interface IView {
 
 	public void DrawMap(ArrayList <IEntity> View);

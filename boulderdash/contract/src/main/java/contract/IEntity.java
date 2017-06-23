@@ -9,11 +9,7 @@ import java.util.ArrayList;
 
 public interface IEntity 
 {
-	/**
-	 * Posx is an int and is initiate at 0.
-	 * Posy is an int and is initiate at 0.
-	 * typeID is an EntityType and is initiate at null.
-	 */
+	
 	public int Posx = 0;
 	public int Posy = 0;
 	public EntityType typeID = null;
