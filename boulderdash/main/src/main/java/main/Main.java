@@ -20,7 +20,7 @@ public abstract class Main {
      *            the argument
      */
     public static void main(final String[] args) {
-    	int world = 5;
+    	int world = 2;
     	
     	View v = new View(world);
         final Controller controller = new Controller(new Model(world), v);
