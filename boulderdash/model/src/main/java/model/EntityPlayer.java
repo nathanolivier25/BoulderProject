@@ -12,7 +12,7 @@ public class EntityPlayer extends Entity {
 	public int Score = 0;
 
 	public EntityPlayer(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.PLAYER,200);
+		super(Posx, Posy, EntityType.PLAYER,100);
 	}
 
 	public int getScore() {
