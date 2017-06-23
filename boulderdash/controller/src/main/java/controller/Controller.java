@@ -41,7 +41,19 @@ public class Controller
 			order = view.GetOrder();
 			
 			if(model.isLost() == true || model.isVictory() == true)
+			{
+				
+				if (model.isLost() == true)
+				{ 
+					view.DrawGameOverMessage();
+				}
+				if (model.isVictory() == true)
+				{
+					view.DrawVictoryMessage();
+				}
 				running = false;
+			}
+				
 			/*
 			try {
 				Thread.sleep(100);
