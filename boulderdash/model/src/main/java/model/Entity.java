@@ -33,7 +33,10 @@ public abstract class Entity implements IEntity{
 		if(t<millisUntilUpdate)
 			return false;
 		else
+		{
+			restartClock();
 			return true;
+		}
 	}
 
 
@@ -59,7 +62,8 @@ public abstract class Entity implements IEntity{
 	}
 
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
-		return null;
+		restartClock();
+		return test;
 		// TODO Auto-generated method stub
 
 	}

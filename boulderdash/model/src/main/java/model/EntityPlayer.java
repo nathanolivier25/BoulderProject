@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 
-import javax.swing.JLabel;
 
 import contract.EntityType;
 import contract.IEntity;
