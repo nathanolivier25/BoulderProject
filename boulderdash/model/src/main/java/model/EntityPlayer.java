@@ -39,7 +39,7 @@ public class EntityPlayer extends Entity {
 						test.remove(j);
 						Score = Score+1;
 					}
-				}
+				} 
 			}
 
 		}
