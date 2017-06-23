@@ -7,7 +7,10 @@ import contract.IEntity;
 import contract.OrderType;
 
 public class EntityRock extends Entity{
-
+	/**
+	 * @param Posx Horizontal location for the EntityRock.
+	 * @param Posy Vertical location for the EntityRock.
+	 */
 	public EntityRock(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.ROCK);
 	}

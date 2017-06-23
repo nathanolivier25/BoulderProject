@@ -8,6 +8,10 @@ import contract.OrderType;
 
 public class EntityDiamond extends Entity{
 
+	/**
+	 * @param Posx Horizontal location for the EntityDiamond.
+	 * @param Posy Vertical location for the EntityDiamond.
+	 */
 	public EntityDiamond(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.DIAMOND);
 	}

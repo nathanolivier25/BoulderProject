@@ -7,7 +7,10 @@ import contract.IEntity;
 import contract.OrderType;
 
 public class BlockVoid extends Entity{
-
+	/**
+	 * @param Posx Horizontal location for the BlockVoid.
+	 * @param Posy Vertical location for the BlockVoid.
+	 */
 	public BlockVoid(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.VOID);
 	}

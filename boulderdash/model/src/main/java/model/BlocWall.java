@@ -7,7 +7,10 @@ import contract.IEntity;
 import contract.OrderType;
 
 public class BlocWall extends Entity{
-
+	/**
+	 * @param Posx Horizontal location for the BlockWall.
+	 * @param Posy Vertical location for the BlockWall.
+	 */
 	public BlocWall(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.WALL);
 	}

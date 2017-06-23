@@ -18,7 +18,10 @@ public class EntityEnemy extends Entity{
 
 	//OrderType Direction = OrderType.RIGHT;
 	
-	
+	/**
+	 * @param Posx Horizontal location for the EntityEnemy.
+	 * @param Posy Vertical location for the EntityEnemy.
+	 */
 	public EntityEnemy(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.ENEMY);
 	}

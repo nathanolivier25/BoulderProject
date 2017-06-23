@@ -8,6 +8,10 @@ import contract.OrderType;
 
 public class BlockEnd extends Entity{
 
+	/**
+	 * @param Posx Horizontal location for the BlockEnd.
+	 * @param Posy Vertical location for the BlockEnd.
+	 */
 	public BlockEnd(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.END);
 	}
