@@ -16,7 +16,6 @@ public abstract class Main {
 
     /**
      * The main method.
-     *
      * @param args
      *            the argument
      */
