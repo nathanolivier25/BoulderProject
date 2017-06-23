@@ -9,22 +9,18 @@ import contract.IEntity;
 import contract.OrderType;
 
 public class EntityPlayer extends Entity {
-	
 
 	public int Score = 0;
 	public String ScoreCount = "Score: " + Score;
 	JLabel scoreLabel = new JLabel("Score : 0");
-	public void someoneScore() {
+	public int getScore() {
 		
-		Score++;
-		scoreLabel.setText("Score : " + Score);
-		scoreLabel.setLocation(5, 5);
+		return Score;
 	}
 
 	public void setScore(int score) {
 		Score = score;
 	}
-
 	public EntityPlayer(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.PLAYER);
 	}
@@ -46,6 +42,7 @@ public class EntityPlayer extends Entity {
 					}
 				}
 			}
+			
 		}
 		if (order == OrderType.RIGHT) {
 			Posx = Posx + 1;
