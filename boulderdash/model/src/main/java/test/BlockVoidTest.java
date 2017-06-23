@@ -9,9 +9,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import contract.EntityType;
-import model.BlockEnd;
+import model.BlockVoid;
 
-public class BlockEndTest {
+public class BlockVoidTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -31,22 +31,22 @@ public class BlockEndTest {
 
 	@Test
 	public void testGetType() {
-		EntityType typeTest = EntityType.END;
-		final BlockEnd e = new BlockEnd(0, 0);
+		EntityType typeTest = EntityType.VOID;
+		final BlockVoid e = new BlockVoid(0, 0);
 		assertEquals(e.getType(), typeTest);
 	}
 
 	@Test
 	public void testGetPosx() {
 		final int posxTest1 = 20;
-		final BlockEnd e = new BlockEnd(posxTest1, 0);
+		final BlockVoid e = new BlockVoid(posxTest1, 0);
 		assertEquals (e.GetPosx(), posxTest1);
 	}
 
 	@Test
 	public void testGetPosy() {
 		final int posyTest2 = 5;
-		final BlockEnd e = new BlockEnd(0, posyTest2);
+		final BlockVoid e = new BlockVoid(0, posyTest2);
 		assertEquals (e.GetPosy(), posyTest2);
 	}
 
