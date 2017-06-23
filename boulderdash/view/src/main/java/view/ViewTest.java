@@ -9,9 +9,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class ViewTest {
+	
+	private View v;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		View v = new View();
 	}
 
 	@AfterClass
@@ -26,24 +29,11 @@ public class ViewTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testLoadImage() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testKeyPressed() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testKeyReleased() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testGetOrder() {
-		fail("Not yet implemented");
+		//because there is no order in test case
+		assertNull(this.v.GetOrder());
 	}
 
 }
