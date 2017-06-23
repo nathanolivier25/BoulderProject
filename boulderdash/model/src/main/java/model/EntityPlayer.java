@@ -18,8 +18,6 @@ public class EntityPlayer extends Entity {
 			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()
 					&& test.get(i).getType() == EntityType.DIAMOND) 
 			{
-				test.add(new BlockVoid(getPosx(), getPosy()));
-
 				for (int j = 0; j < test.size(); j++) 
 				{
 					if (test.get(j).GetPosx() == this.getPosx() && test.get(j).GetPosy() == this.getPosy()
