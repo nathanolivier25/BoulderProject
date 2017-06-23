@@ -40,7 +40,7 @@ public class EntityTest {
 
 	@Test
 	public void testGetPosx() {
-		int posxTest1 = 2;
+		int posxTest1 = 40;
 		entity.setPosx(posxTest1);
 		assertEquals(entity.getPosx(), posxTest1);
 	}
@@ -56,12 +56,14 @@ public class EntityTest {
 	public void testGetPosy() {
 		int posyTest3 = 20;
 		entity.setPosy(posyTest3);
-		//assertEquals(entity)
+		assertEquals(entity.getPosy(), posyTest3);
 	}
 
 	@Test
 	public void testSetPosy() {
-		fail("Not yet implemented");
+		int posyTest4 = 25;
+		entity.setPosy(posyTest4);
+		assertEquals(posyTest4, entity.getPosy());
 	}
 
 }
