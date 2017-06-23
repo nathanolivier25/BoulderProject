@@ -17,6 +17,9 @@ public class Model implements IModel{
 	private EntityPlayer playerref;
 	
 	
+	/**
+	 * @param world Number of the world (1 to 5).
+	 */
 	public Model(int world) 
 	{
 		 
@@ -45,6 +48,11 @@ public class Model implements IModel{
 		
 		
 	}
+	
+	/**
+	 * The player won't win if he doesn't pick 3 diamonds.
+	 * Otherwise he will win.
+	 */
 	public boolean isVictory()
 	{
 		if(playerref.getScore() != 3)
