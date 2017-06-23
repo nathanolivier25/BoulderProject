@@ -8,6 +8,10 @@ import contract.OrderType;
 
 public class BlocDirt extends Entity {
 
+	/**
+	 * @param Posx Horizontal location for the BlockDirt.
+	 * @param Posy Vertical location for the BlockDirt.
+	 */
 	public BlocDirt(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.DIRT);
 	}
