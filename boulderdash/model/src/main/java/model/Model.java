@@ -63,10 +63,12 @@ public class Model implements IModel{
 	}
 	public boolean isLost()
 	{
-		boolean isAlive = false;
+		boolean isDead = true;
 		for(int i = 0; i <model.size(); i++)
-			if(model.get(i).getType())
+			if(model.get(i).getType() == EntityType.PLAYER)
+				isDead = false;
 		
+		return isDead;
 	}
 	public ArrayList<IEntity> GetMap()
 	{
