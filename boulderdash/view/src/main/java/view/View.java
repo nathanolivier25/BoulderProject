@@ -52,6 +52,7 @@ public class View implements IView, KeyListener{
 		windows.setSize(800, 600);
 		windows.setLocationRelativeTo(null);
 		windows.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		windows.setResizable(false);
 		windows.setVisible(true);
 
 
@@ -60,6 +61,10 @@ public class View implements IView, KeyListener{
 		
 		windows.addKeyListener(this);
 		windows.requestFocus();
+		
+
+		
+		
 	}
 
 	/**
@@ -70,6 +75,7 @@ public class View implements IView, KeyListener{
 	 */
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
+		windows.getContentPane().setBackground(Color.BLACK);
 		
 		if(mapSizeX == 0 && mapSizeY == 0)
 		{

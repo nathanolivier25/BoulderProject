@@ -11,55 +11,59 @@ import model.dao.LevelDAO;
 import contract.IModel;
 
 public class Model implements IModel{
-	
+
 
 	private ArrayList <IEntity> model;
 	private EntityPlayer playerref;
-	
-	
+
+
 	/**
 	 * @param world Number of the world (1 to 5).
 	 */
 	public Model(int world) 
 	{
-		 
-		 try {
+
+		try {
 			model = LevelDAO.getBackground(world);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 
-			for (int i = 0; i < model.size(); i++)
+
+		for (int i = 0; i < model.size(); i++)
+		{
+			if(model.get(i).getType() == EntityType.PLAYER)
 			{
-				if(model.get(i).getType() == EntityType.PLAYER)
-				{
-					playerref = (EntityPlayer) model.get(i);
-				}
+				playerref = (EntityPlayer) model.get(i);
 			}
-		 
-		 
+		}
+
+
 	}
-	
+
 	public void Update(OrderType order)
 	{
 		for(int i = 0; i <model.size(); i++)
 			if(model.get(i).canExec())
-			model = model.get(i).Update(model, order);
-		
-		
+				model = model.get(i).Update(model, order);
+
+
 	}
-	
+
 	/**
 	 * The player won't win if he doesn't pick 3 diamonds.
 	 * Otherwise he will win.
 	 */
 	public boolean isVictory()
 	{
-		if(playerref.getScore() != 3)
+		if(playerref.getScore() == 3)
+		{
+			for(int i = 0; i <model.size(); i++)
+				if(model.get(i).GetPosx() == playerref.GetPosx() && model.get(i).GetPosy() == playerref.getPosy() 
+				&& model.get(i).getType() == EntityType.END)
+					return true;
+		}
 		return false;
-		else
-		return true;
 	}
 	public boolean isLost()
 	{
@@ -67,13 +71,13 @@ public class Model implements IModel{
 		for(int i = 0; i <model.size(); i++)
 			if(model.get(i).getType() == EntityType.PLAYER)
 				isDead = false;
-		
+
 		return isDead;
 	}
 	public ArrayList<IEntity> GetMap()
 	{
 		return model;
-		
+
 	}
-	
+
 }

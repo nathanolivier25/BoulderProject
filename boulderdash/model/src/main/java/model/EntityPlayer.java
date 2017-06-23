@@ -53,7 +53,7 @@ public class EntityPlayer extends Entity {
 			{
 				if (test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy())
 				{
-					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND)&& (test.get(i).getType() !=EntityType.END))
 					{
 						if(test.get(i).getType() == EntityType.ROCK)
 						{
@@ -97,7 +97,7 @@ public class EntityPlayer extends Entity {
 			{
 				if (test.get(i).GetPosx() == this.getPosx()-1 && test.get(i).GetPosy() == this.getPosy())
 				{
-					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND)&& (test.get(i).getType() !=EntityType.END))
 					{
 						if(test.get(i).getType() == EntityType.ROCK)
 						{
@@ -137,7 +137,7 @@ public class EntityPlayer extends Entity {
 			{
 				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() - 1)
 				{
-					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND)&& (test.get(i).getType() !=EntityType.END))
 					{
 						canmove = false;
 					}
@@ -156,7 +156,7 @@ public class EntityPlayer extends Entity {
 			{
 				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() + 1)
 				{
-					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND))
+					if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.DIRT) && (test.get(i).getType() !=EntityType.DIAMOND)&& (test.get(i).getType() !=EntityType.END))
 					{
 						canmove = false;
 					}
