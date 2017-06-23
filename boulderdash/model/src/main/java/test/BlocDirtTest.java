@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import contract.EntityType;
 import model.BlocDirt;
-import model.EntityDiamond;
 
 public class BlocDirtTest {
 
