@@ -63,7 +63,9 @@ public class Model implements IModel{
 	}
 	public boolean isLost()
 	{
-		return false;
+		boolean isAlive = false;
+		for(int i = 0; i <model.size(); i++)
+			if(model.get(i).getType())
 		
 	}
 	public ArrayList<IEntity> GetMap()

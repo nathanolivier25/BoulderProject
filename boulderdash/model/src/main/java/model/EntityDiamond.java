@@ -23,33 +23,43 @@ public class EntityDiamond extends Entity{
 		super(Posx, Posy, EntityType.DIAMOND,500);
 	}
 
-	
+
 	/**
 	 * The diamond can't fall if there are a void AND a player below it.
 	 * Otherwise, it will fall.
 	 */
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
-			boolean canFall = true;
-			
+		boolean canFall = true;
+
+		for (int i = 0; i < test.size(); i++)
+		{
+			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
+			{
+				EntityType temp = test.get(i).getType();
+				if((temp != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
+				{
+					canFall = false;
+				}
+
+			}
+		} 		
+		if(canFall)
+		{
+			Posy = Posy + 1;
+
 			for (int i = 0; i < test.size(); i++)
 			{
-				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
+				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
 				{
-					EntityType temp = test.get(i).getType();
-					if((temp != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
-					{
-						canFall = false;
-					}	
+					test.remove(i);
 				}
-			} 		
-			if(canFall)
-			{
-				Posy = Posy + 1;
 			}	
+
+		}	
 		return test;
 	}
-	
+
 	@Override
 	public int GetPosx() {
 		// TODO Auto-generated method stub

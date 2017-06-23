@@ -43,7 +43,16 @@ public class EntityEnemy extends Entity{
 				}
 				
 				if(canmove)
+				{
 					Posy = Posy - 1;
+					for (int i = 0; i < test.size(); i++)
+					{
+						if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
+						{
+							test.remove(i);
+						}
+					}	
+				}
 				else
 					this.previousSide = OrderType.RIGHT;
 			}
@@ -61,7 +70,16 @@ public class EntityEnemy extends Entity{
 					}
 				}
 				if(canmove)
+				{
 					Posy = Posy + 1;
+					for (int i = 0; i < test.size(); i++)
+					{
+						if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
+						{
+							test.remove(i);
+						}
+					}	
+				}
 					else
 						this.previousSide = OrderType.LEFT;
 
@@ -81,7 +99,16 @@ public class EntityEnemy extends Entity{
 				}
 				
 				if(canmove)
+				{
 					Posx = Posx - 1;
+					for (int i = 0; i < test.size(); i++)
+					{
+						if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
+						{
+							test.remove(i);
+						}
+					}	
+				}
 					else
 						this.previousSide = OrderType.UP;
 
@@ -100,7 +127,16 @@ public class EntityEnemy extends Entity{
 					}
 				}
 				if(canmove)
+				{
 					Posx = Posx + 1;
+					for (int i = 0; i < test.size(); i++)
+					{
+						if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
+						{
+							test.remove(i);
+						}
+					}	
+				}
 					else
 						this.previousSide = OrderType.DOWN;
 			}
