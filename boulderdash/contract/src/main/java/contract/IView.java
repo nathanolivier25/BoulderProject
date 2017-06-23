@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * The IView interface is used to call the abstract methods
  * from the View class.
  * 
- * @author Groupe 1
+ * @author Group 1
  * @version 1
  */
 public interface IView {
