@@ -6,7 +6,8 @@ import contract.IEntity;
 import contract.OrderType;
 
 public class EntityPlayer extends Entity {
-
+	
+	public int Score = 0;
 	public EntityPlayer(int Posx, int Posy) {
 		super(Posx, Posy, EntityType.PLAYER);
 	}
@@ -24,7 +25,7 @@ public class EntityPlayer extends Entity {
 							&& test.get(j).getType() == EntityType.DIAMOND)
 						test.remove(j);
 					{
-
+						Score = Score+1;
 					}
 				}
 			}
