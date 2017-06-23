@@ -47,8 +47,8 @@ public class BlocDirtTest {
 	@Test
 	public void testGetPosy() {
 		final int posyTest2 = 5;
-		final BlocDirt e = new BlocDirt(posyTest2, 0);
-		assertEquals (e.GetPosx(), posyTest2);
+		final BlocDirt e = new BlocDirt(0, posyTest2);
+		assertEquals (e.GetPosy(), posyTest2);
 	}
 
 }
