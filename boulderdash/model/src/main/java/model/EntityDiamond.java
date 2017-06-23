@@ -17,6 +17,7 @@ public class EntityDiamond extends Entity{
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
 			boolean canFall = true;
+			
 			for (int i = 0; i < test.size(); i++)
 			{
 				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
