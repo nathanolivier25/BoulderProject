@@ -20,7 +20,7 @@ public class BlockEnd extends Entity{
 	 * @param Posy Vertical location for the BlockEnd.
 	 */
 	public BlockEnd(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.END,100);
+		super(Posx, Posy, EntityType.END,0);
 	}
 
 	

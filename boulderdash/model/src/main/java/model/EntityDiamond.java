@@ -20,7 +20,7 @@ public class EntityDiamond extends Entity{
 	 * @param Posy Vertical location for the EntityDiamond.
 	 */
 	public EntityDiamond(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.DIAMOND,100);
+		super(Posx, Posy, EntityType.DIAMOND,500);
 	}
 
 	
