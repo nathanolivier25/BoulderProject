@@ -27,8 +27,8 @@ public class EntityRock extends Entity{
 			
 			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1)
 			{
-				EntityType temp = test.get(i).getType();
-				if((temp != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
+				if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER) 
+						&& (test.get(i).getType() !=EntityType.ENEMY))
 				{
 					canFall = false;
 				}
@@ -41,7 +41,8 @@ public class EntityRock extends Entity{
 			Posy = Posy + 1;
 			for (int i = 0; i < test.size(); i++)
 			{
-				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.PLAYER)
+				if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() 
+						&& (test.get(i).getType() == EntityType.PLAYER || test.get(i).getType() == EntityType.ENEMY))
 				{
 					test.remove(i);
 				}

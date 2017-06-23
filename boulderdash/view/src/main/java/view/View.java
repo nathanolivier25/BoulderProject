@@ -42,7 +42,7 @@ public class View implements IView, KeyListener{
 	 * setSize is the windows size.
 	 * 
 	 */
-	public View()
+	public View(int world)
 	{
 		this.image = new ArrayList <ElementSprite>();
 		this.lastOrder = null;
@@ -56,7 +56,7 @@ public class View implements IView, KeyListener{
 
 
 
-		loadImage();
+		loadImage(world);
 		
 		windows.addKeyListener(this);
 		windows.requestFocus();
@@ -130,17 +130,19 @@ public class View implements IView, KeyListener{
 	 * loadImage is used to take the localization of all sprite in the picture files.
 	 */
 
-	public void loadImage()
+	private void loadImage(int xline)
 
 	{
-
-		image.add(new ElementSprite("74359.png",0,0,EntityType.WALL));
-		image.add(new ElementSprite("74359.png",16,0,EntityType.DIRT));
-		image.add(new ElementSprite("74359.png",32,0,EntityType.VOID));
-		image.add(new ElementSprite("74359.png",48,0,EntityType.ROCK));
-		image.add(new ElementSprite("74359.png",64,0,EntityType.DIAMOND));
-		image.add(new ElementSprite("74359.png",96,0,EntityType.END));
-		image.add(new ElementSprite("74359.png",144,0,EntityType.ENEMY));
+		xline--;
+		xline*=64;
+		
+		image.add(new ElementSprite("74359.png",0,xline,EntityType.WALL));
+		image.add(new ElementSprite("74359.png",16,xline,EntityType.DIRT));
+		image.add(new ElementSprite("74359.png",32,xline,EntityType.VOID));
+		image.add(new ElementSprite("74359.png",48,xline,EntityType.ROCK));
+		image.add(new ElementSprite("74359.png",64,xline,EntityType.DIAMOND));
+		image.add(new ElementSprite("74359.png",96,xline,EntityType.END));
+		image.add(new ElementSprite("74359.png",144,xline,EntityType.ENEMY));
 		image.add(new ElementSprite("74336.png",48,224,EntityType.PLAYER));
 
 	}
