@@ -11,8 +11,11 @@ import contract.OrderType;
 public class EntityPlayer extends Entity {
 
 	public int Score = 0;
-	public String ScoreCount = "Score: " + Score;
-	JLabel scoreLabel = new JLabel("Score : 0");
+	
+	public EntityPlayer(int Posx, int Posy) {
+		super(Posx, Posy, EntityType.PLAYER);
+	}
+	
 	public int getScore() {
 		
 		return Score;
@@ -20,9 +23,6 @@ public class EntityPlayer extends Entity {
 
 	public void setScore(int score) {
 		Score = score;
-	}
-	public EntityPlayer(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.PLAYER);
 	}
 
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
@@ -36,8 +36,8 @@ public class EntityPlayer extends Entity {
 				{
 					if (test.get(j).GetPosx() == this.getPosx() && test.get(j).GetPosy() == this.getPosy()
 							&& test.get(j).getType() == EntityType.DIAMOND)
-						test.remove(j);
 					{
+						test.remove(j);
 						Score = Score+1;
 					}
 				}

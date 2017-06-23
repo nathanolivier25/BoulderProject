@@ -3,6 +3,7 @@ package model;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 import model.dao.LevelDAO;
@@ -13,6 +14,7 @@ public class Model implements IModel{
 	
 
 	private ArrayList <IEntity> model;
+	private EntityPlayer playerref;
 	
 	
 	public Model(int world) 
@@ -24,6 +26,14 @@ public class Model implements IModel{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		 
+			for (int i = 0; i < model.size(); i++)
+			{
+				if(model.get(i).getType() == EntityType.PLAYER)
+				{
+					playerref = (EntityPlayer) model.get(i);
+				}
+			}
 		 
 		 
 	}
@@ -37,8 +47,10 @@ public class Model implements IModel{
 	}
 	public boolean isVictory()
 	{
+		if(playerref.getScore() != 3)
 		return false;
-
+		else
+		return true;
 	}
 	public boolean isLost()
 	{
@@ -49,13 +61,6 @@ public class Model implements IModel{
 	{
 		return model;
 		
-	}
-	
-
-
-	public int getScore()
-	{
-		return 0;
 	}
 	
 }
