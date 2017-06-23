@@ -13,9 +13,21 @@ public class EntityPlayer extends Entity{
 
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
+		for (int i = 0; i < test.size(); i++) {
+			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()
+					&& test.get(i).getType() == EntityType.DIAMOND) 
+			{
+				test.add(new BlockVoid(getPosx(), getPosy()));
+
+				for (int j = 0; j < test.size(); j++) {
+					if (test.get(j).GetPosx() == this.getPosx() && test.get(j).GetPosy() == this.getPosy() 
+							&& test.get(j).getType() == EntityType.DIAMOND) 
+						test.remove(j);
+				}
+			}
+		}
 		if (order == OrderType.RIGHT)
 		{
-
 			Posx = Posx +1;
 		}
 
@@ -23,9 +35,6 @@ public class EntityPlayer extends Entity{
 		{
 			Posx = Posx - 1;
 		}
-		
-		
-		
 		if(order == OrderType.UP)
 		{
 			Posy = Posy - 1;
@@ -35,7 +44,6 @@ public class EntityPlayer extends Entity{
 		{
 			Posy = Posy + 1;
 		}
-
 		return test;
 	}
 	@Override
