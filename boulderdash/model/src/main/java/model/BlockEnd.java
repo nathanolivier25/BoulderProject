@@ -6,6 +6,13 @@ import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 
+/**
+ * BlockEnd is the class that define the "behavior" of our end.
+ * 
+ * @author Group 1
+ * @version 1
+ */
+
 public class BlockEnd extends Entity{
 
 	/**

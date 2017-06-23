@@ -15,6 +15,10 @@ public class Controller
 
 	
 	
+	/**
+	 * @param model Name of IModel
+	 * @param view Name of IView
+	 */
 	public Controller (IModel model, IView view)
 	{
 		this.model = model;
