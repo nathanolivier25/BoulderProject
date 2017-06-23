@@ -22,7 +22,21 @@ public class Model implements IModel{
 	 */
 	public Model(int world) 
 	{
+		Reload(world);
 
+	}
+
+	public void Update(OrderType order)
+	{
+		for(int i = 0; i <model.size(); i++)
+			if(model.get(i).canExec())
+				model = model.get(i).Update(model, order);
+
+
+	}
+	
+	public void Reload(int world)
+	{
 		try {
 			model = LevelDAO.getBackground(world);
 		} catch (SQLException e) {
@@ -37,18 +51,8 @@ public class Model implements IModel{
 				playerref = (EntityPlayer) model.get(i);
 			}
 		}
-
-
 	}
-
-	public void Update(OrderType order)
-	{
-		for(int i = 0; i <model.size(); i++)
-			if(model.get(i).canExec())
-				model = model.get(i).Update(model, order);
-
-
-	}
+	
 
 	/**
 	 * The player won't win if he doesn't pick 3 diamonds.
@@ -56,7 +60,7 @@ public class Model implements IModel{
 	 */
 	public boolean isVictory()
 	{
-		if(playerref.getScore() == 3)
+		if(playerref.getScore() >= 3)
 		{
 			for(int i = 0; i <model.size(); i++)
 				if(model.get(i).GetPosx() == playerref.GetPosx() && model.get(i).GetPosy() == playerref.getPosy() 

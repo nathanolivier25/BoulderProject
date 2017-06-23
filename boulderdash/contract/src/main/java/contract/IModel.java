@@ -12,6 +12,7 @@ public interface IModel {
 
 	public void Update(OrderType order);
 
+	public void Reload(int world);
 	public ArrayList<IEntity> GetMap();
 
 	public boolean isVictory();

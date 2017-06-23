@@ -38,6 +38,7 @@ public class View implements IView, KeyListener{
 	private int mapSizeY;
 	private EndMessage gamerOverMessage;
 	private EndMessage victoryMessage;
+	private StartMenu menu;
 	/**
 	 * View's constructor 
 	 * setTitle That's the name of our game.
@@ -63,11 +64,26 @@ public class View implements IView, KeyListener{
 		
 		windows.addKeyListener(this);
 		windows.requestFocus();
+		menu = new StartMenu(windows);
 		
 		this.gamerOverMessage = new EndMessage("game_over.png");
 		this.victoryMessage = new EndMessage("victory.png");
 			
 	}
+	
+	
+	public void Reload(int world)
+	{
+		image.clear();
+		loadImage(world);
+	}
+	
+	
+	public int DrawStartMenu()
+	{
+		return menu.run();
+	}
+	
 
 	/**
 	 * DrawMap Method
@@ -78,6 +94,7 @@ public class View implements IView, KeyListener{
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
 		windows.getContentPane().setBackground(Color.BLACK);
+		windows.getGraphics().fillRect(0, 0, mapSizeX, mapSizeY);
 		
 		if(mapSizeX == 0 && mapSizeY == 0)
 		{

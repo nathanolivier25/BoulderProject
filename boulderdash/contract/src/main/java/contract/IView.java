@@ -12,6 +12,8 @@ import java.util.ArrayList;
 public interface IView {
 
 	public void DrawMap(ArrayList <IEntity> View);
+	public void Reload(int world);
+	public int DrawStartMenu();
 	public OrderType GetOrder();
 	public void DrawVictoryMessage();
 	public void DrawGameOverMessage();

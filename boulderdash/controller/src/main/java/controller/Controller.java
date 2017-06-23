@@ -8,7 +8,7 @@ import contract.OrderType;
 
 public class Controller 
 {
-	private boolean running;
+	private boolean ingame;
 	private IModel model;
 	private IView view;
 	private Clock clock;
@@ -23,47 +23,49 @@ public class Controller
 	{
 		this.model = model;
 		this.view = view;
-		running = true;
+		ingame = true;
+
 	}
 	
 	public void run()
 	{
 		OrderType order = null;
 		
-		
-		while(running == true)
+		while(true)
 		{
+			ingame = true;
+			int level = view.DrawStartMenu();
 			
-			model.Update(order);
+			model.Reload(level);
+			view.Reload(level);
 			
-			
-			view.DrawMap(model.GetMap());
-			order = view.GetOrder();
-			
-			if(model.isLost() == true || model.isVictory() == true)
+			while(ingame == true)
 			{
 				
-				if (model.isLost() == true)
-				{ 
-					view.DrawGameOverMessage();
-				}
-				if (model.isVictory() == true)
-				{
-					view.DrawVictoryMessage();
-				}
-				running = false;
-			}
+				model.Update(order);
 				
-			/*
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			//*/
+				
+				view.DrawMap(model.GetMap());
+				order = view.GetOrder();
+				
+				if(model.isLost() == true || model.isVictory() == true)
+				{
 					
+					if (model.isLost() == true)
+					{ 
+						view.DrawGameOverMessage();
+					}
+					if (model.isVictory() == true)
+					{
+						view.DrawVictoryMessage();
+					}
+					ingame = false;
+				}
+						
+			}
+			
 		}
+		
 	}
 }
 
