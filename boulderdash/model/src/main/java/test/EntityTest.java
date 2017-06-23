@@ -10,11 +10,11 @@ import org.junit.Test;
 
 import contract.EntityType;
 import model.Entity;
+import model.EntityDiamond;
 
 public class EntityTest {
 
-	protected Entity entity;
-	
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -34,36 +34,36 @@ public class EntityTest {
 	@Test
 	public void testGetType() {
 		EntityType typeTest = EntityType.DIAMOND;
-		//entity.setType(typeTest);
-		assertEquals(entity.getType(), typeTest);
+		final EntityDiamond e = new EntityDiamond(0, 0);
+		assertEquals(e.getType(), typeTest);
 	}
 
 	@Test
 	public void testGetPosx() {
-		int posxTest1 = 40;
-		entity.setPosx(posxTest1);
-		assertEquals(entity.getPosx(), posxTest1);
+		final int posxTest1 = 2;
+		final EntityDiamond e = new EntityDiamond(posxTest1, 0);
+		assertEquals (e.GetPosx(), posxTest1);
 	}
 
 	@Test
 	public void testSetPosx() {
 		int posxTest2 = 10;
-		entity.setPosx(posxTest2);
-		assertEquals(posxTest2, entity.getPosx());
+		final EntityDiamond e = new EntityDiamond(posxTest2, 0);
+		assertEquals(posxTest2, e.getPosx());
 	}
 
 	@Test
 	public void testGetPosy() {
 		int posyTest3 = 20;
-		entity.setPosy(posyTest3);
-		assertEquals(entity.getPosy(), posyTest3);
+		final EntityDiamond e = new EntityDiamond(0, posyTest3);
+		assertEquals(e.getPosy(), posyTest3);
 	}
 
 	@Test
 	public void testSetPosy() {
 		int posyTest4 = 25;
-		entity.setPosy(posyTest4);
-		assertEquals(posyTest4, entity.getPosy());
+		final EntityDiamond e = new EntityDiamond(0, posyTest4);
+		assertEquals(posyTest4, e.getPosy());
 	}
 
 }
