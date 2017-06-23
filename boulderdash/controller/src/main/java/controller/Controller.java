@@ -1,30 +1,25 @@
 package controller;
-/**
- * la classe controller permet de faire le lien entre le model et la vue 
- * @author Groupe 1
- * @versio  1
- */
+
 import java.time.Clock;
 import contract.IModel;
 import contract.IView;
 import contract.OrderType;
 
-
+/**
+ * The Controller class 
+ * la classe controller permet de faire le lien entre le model et la vue 
+ * @author Groupe 1
+ * @version  1
+ */
 public class Controller 
 {
-	/**
-	 * running est de type boolean 
-	 * model est de type IModel
-	 * view est de type IView
-	 * clock est de type Clock
-	 */
 	private boolean running;
 	private IModel model;
 	private IView view;
 	private Clock clock;
 
 	/**
-	 * <b> Constructeur de Controlleur
+	 * Controlleur's constructor
 	 * @param model
 	 * @param view
 	 */
@@ -35,6 +30,7 @@ public class Controller
 		running = true;
 	}
 	/**
+	 * The run method 
 	 * la methode run permet de mettre en lien le model et la vue pour l'affichage de la map 
 	 * ici que la victor ou la defaite de la partie 
 	 */

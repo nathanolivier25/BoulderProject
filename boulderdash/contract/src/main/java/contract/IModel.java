@@ -1,12 +1,13 @@
 package contract;
+
+import java.util.ArrayList;
+
 /**
- * the IModel interface is an interface that call abstract method.
+ * the IModel interface is used to call abstract methods.
  *
  * @author Group 1
  * @version 1
  */
-import java.util.ArrayList;
-
 public interface IModel {
 
 	public void Update(OrderType order);
