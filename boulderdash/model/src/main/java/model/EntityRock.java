@@ -32,8 +32,6 @@ public class EntityRock extends Entity{
 				{
 					canFall = false;
 				}
-				
-				
 			}
 
 		} 	
