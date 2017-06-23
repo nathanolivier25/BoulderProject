@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/Hugo/git/BoulderProject/boulderdash/contract/target/classes;C:/Users/Hugo/git/BoulderProject/boulderdash/controller/target/classes;C:/Users/Hugo/git/BoulderProject/boulderdash/model/target/classes;C:/Users/Hugo/git/BoulderProject/boulderdash/view/target/classes;C:/Users/Hugo/git/BoulderProject/boulderdash/main/target/classes;C:/Users/Hugo/.m2/repository/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'C:/Users/Hugo/git/BoulderProject/boulderdash/contract/src/main/java;C:/Users/Hugo/git/BoulderProject/boulderdash/contract/target/generated-sources/annotations;C:/Users/Hugo/git/BoulderProject/boulderdash/controller/src/main/java;C:/Users/Hugo/git/BoulderProject/boulderdash/controller/target/generated-sources/annotations;C:/Users/Hugo/git/BoulderProject/boulderdash/model/src/main/java;C:/Users/Hugo/git/BoulderProject/boulderdash/model/target/generated-sources/annotations;C:/Users/Hugo/git/BoulderProject/boulderdash/view/src/main/java;C:/Users/Hugo/git/BoulderProject/boulderdash/view/target/generated-sources/annotations;C:/Users/Hugo/git/BoulderProject/boulderdash/main/src/main/java;C:/Users/Hugo/git/BoulderProject/boulderdash/main/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Hugo/git/BoulderProject/boulderdash/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'boulderdash 0.0.1-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' 'C:/Users/Hugo/git/BoulderProject/boulderdash/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'boulderdash 0.0.1-SNAPSHOT API'

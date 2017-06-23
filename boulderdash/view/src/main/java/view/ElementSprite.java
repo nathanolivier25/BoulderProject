@@ -16,13 +16,12 @@ public class ElementSprite
 	private int drawy;
 	private EntityType id;
 /**	
-	* @method getSubimage
-	* @param x the X coordinate of the upper-left corner of the
+	* @param x1 the X coordinate of the upper-left corner of the
 	*          specified rectangular region
-	* @param y the Y coordinate of the upper-left corner of the
+	* @param y1 the Y coordinate of the upper-left corner of the
 	*          specified rectangular region
-	* @param w the width of the specified rectangular region
-	* @param h the height of the specified rectangular region
+	* @param path equals the path of our pictures.
+	* @param type equals the type of our entities.
 	* */
 	
 	public ElementSprite(String path, int x1, int y1, EntityType type)
@@ -39,7 +38,7 @@ public class ElementSprite
 		
 	}
 	/**
-	 * The paintComponent method draws the map on the frame.q
+	 * The paintComponent method draws the map on the frame.
 	 * @param g is a variable that contains the graphics par of the frame.
 	 */
 	public void paintComponent(Graphics g) 
@@ -48,8 +47,8 @@ public class ElementSprite
 	}
 	/**
 	 * This method says where we need to draw the map.
-	 * @param x
-	 * @param y
+	 * @param x that's the horizontal location in the arraylist
+	 * @param y that's the vertical location in the arraylist
 	 */
 	public void setWhereToDraw(int x, int y)
 	{
