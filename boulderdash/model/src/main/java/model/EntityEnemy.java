@@ -9,8 +9,6 @@ import contract.OrderType;
 /**
  * EntityEnemy is the class that define the behavior of our enemies
  * It's defined by the following elements :
- * <ul>
- * <li>
  * @author Group 1
  * @version 1
  */
