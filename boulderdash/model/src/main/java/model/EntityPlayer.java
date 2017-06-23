@@ -1,16 +1,24 @@
 package model;
 
 import java.util.ArrayList;
+
+import javax.swing.JLabel;
+
 import contract.EntityType;
 import contract.IEntity;
 import contract.OrderType;
 
 public class EntityPlayer extends Entity {
 	
+
 	public int Score = 0;
-	public int getScore() {
+	public String ScoreCount = "Score: " + Score;
+	JLabel scoreLabel = new JLabel("Score : 0");
+	public void someoneScore() {
 		
-		return Score;
+		Score++;
+		scoreLabel.setText("Score : " + Score);
+		scoreLabel.setLocation(5, 5);
 	}
 
 	public void setScore(int score) {
