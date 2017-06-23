@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
@@ -29,8 +30,7 @@ public class View implements IView, KeyListener{
 	/**
 	 * image in an ArrayListe<ElementSprite> 
 	 * windows is a JFrame 
-	 * lasterOrder in an  OrderType
-	 * mapSizeX, mapSizeY are int 
+	 * lasterOrder in an  OrderType 
 	 */
 	private ArrayList <ElementSprite> image;
 	private JFrame windows;
@@ -54,8 +54,6 @@ public class View implements IView, KeyListener{
 		windows.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		windows.setVisible(true);
 
-		mapSizeX = 20;
-		mapSizeY = 20;
 
 
 		loadImage();
@@ -72,8 +70,23 @@ public class View implements IView, KeyListener{
 	 */
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
+		
+		if(mapSizeX == 0 && mapSizeY == 0)
+		{
+			for  (int i = 0; i  < drawMap.size(); i++)
+			{
+				if(drawMap.get(i).GetPosx() > mapSizeX)
+					mapSizeX = drawMap.get(i).GetPosx();
+				
+				if(drawMap.get(i).GetPosy() > mapSizeY)
+					mapSizeY = drawMap.get(i).GetPosy();	
+			}
+		}
+		
+
 		int startX = (windows.getSize().width-(mapSizeX *16))/2;
 		int startY = (windows.getSize().height-(mapSizeY *16))/2;
+		
 
 		BufferedImage bimage = new BufferedImage(windows.getWidth(), windows.getHeight(), BufferedImage.TYPE_INT_ARGB);
 
