@@ -36,6 +36,8 @@ public class View implements IView, KeyListener{
 	private OrderType lastOrder;
 	private int mapSizeX;
 	private int mapSizeY;
+	private EndMessage gamerOverMessage;
+	private EndMessage victoryMessage;
 	/**
 	 * View's constructor 
 	 * setTitle That's the name of our game.
@@ -62,9 +64,9 @@ public class View implements IView, KeyListener{
 		windows.addKeyListener(this);
 		windows.requestFocus();
 		
-
-		
-		
+		this.gamerOverMessage = new EndMessage("game_over.png");
+		this.victoryMessage = new EndMessage("victory.png");
+			
 	}
 
 	/**
@@ -214,7 +216,28 @@ public class View implements IView, KeyListener{
 
 	}
 	
+	public void DrawVictoryMessage()
+	{
+		victoryMessage.DrawEndPicture(windows.getGraphics());
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
+	public void DrawGameOverMessage()
+	{
+		gamerOverMessage.DrawEndPicture(windows.getGraphics());
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
 
 

@@ -7,13 +7,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public abstract class EndMessage
+public class EndMessage
 {
 private BufferedImage image;
-private int tps;
 
 
-	public EndMessage (String chemin, int tps)
+	public EndMessage (String chemin)
 	{
 		try 
 		{
@@ -23,10 +22,7 @@ private int tps;
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		this.tps = tps; 
-		
+		}	
 	}
 	
 	public void DrawEndPicture(Graphics g)

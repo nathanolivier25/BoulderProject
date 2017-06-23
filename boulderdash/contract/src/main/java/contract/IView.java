@@ -13,5 +13,7 @@ public interface IView {
 
 	public void DrawMap(ArrayList <IEntity> View);
 	public OrderType GetOrder();
+	public void DrawVictoryMessage();
+	public void DrawGameOverMessage();
 	
 }
