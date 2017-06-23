@@ -167,6 +167,17 @@ public class View implements IView, KeyListener{
 			break;
 		}
 	}
+	
+	
+	public void close()
+	{
+		windows.setVisible(false);
+	}
+	
+	
+	
+	
+	
 	/**
 	 * The keyReleased method is used to know when we release a key on the keyboard.
 	 * @param e return an error.
