@@ -14,7 +14,6 @@ public interface IEntity
 	public int Posy = 0;
 	public EntityType typeID = null;
 	
-	
 	/**
 	 * There are the Getters and Setters from Posx, Posy and typeID.
 	 */
