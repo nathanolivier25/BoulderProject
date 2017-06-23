@@ -14,10 +14,19 @@ public class BlocDirt extends Entity {
 
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
+
+
 		for (int i = 0; i < test.size(); i++) {
 			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()
-					&& test.get(i).getType() == EntityType.PLAYER) {
+					&& test.get(i).getType() == EntityType.PLAYER) 
+			{
 				test.add(new BlockVoid(getPosx(), getPosy()));
+
+				for (int j = 0; j < test.size(); j++) {
+					if (test.get(j).GetPosx() == this.getPosx() && test.get(j).GetPosy() == this.getPosy() 
+							&& test.get(j).getType() == EntityType.DIRT) 
+						test.remove(j);
+				}
 			}
 		}
 		// TODO Auto-generated method stub

@@ -150,7 +150,7 @@ public class View implements IView, KeyListener{
 		case KeyEvent.VK_LEFT:
 			lastOrder = OrderType.LEFT;
 			break;
-		default:
+		default: 
 			break;
 		}
 	}
