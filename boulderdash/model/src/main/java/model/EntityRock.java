@@ -12,7 +12,7 @@ public class EntityRock extends Entity{
 	 * @param Posy Vertical location for the EntityRock.
 	 */
 	public EntityRock(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.ROCK);
+		super(Posx, Posy, EntityType.ROCK,500);
 	}
 
 	/**

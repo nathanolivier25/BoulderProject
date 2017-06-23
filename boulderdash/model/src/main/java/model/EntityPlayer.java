@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 
-import javax.swing.JLabel;
 
 import contract.EntityType;
 import contract.IEntity;
@@ -13,7 +12,7 @@ public class EntityPlayer extends Entity {
 	public int Score = 0;
 
 	public EntityPlayer(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.PLAYER);
+		super(Posx, Posy, EntityType.PLAYER,200);
 	}
 
 	public int getScore() {

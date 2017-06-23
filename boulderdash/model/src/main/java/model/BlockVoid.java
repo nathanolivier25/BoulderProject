@@ -18,7 +18,7 @@ public class BlockVoid extends Entity{
 	 * @param Posy Vertical location for the BlockVoid.
 	 */
 	public BlockVoid(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.VOID);
+		super(Posx, Posy, EntityType.VOID,0);
 	}
 
 	

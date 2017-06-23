@@ -14,38 +14,103 @@ import contract.OrderType;
  */
 public class EntityEnemy extends Entity{
 	
+	 private OrderType previousSide;
 	/**
 	 * @param Posx Horizontal location for the EntityEnemy.
 	 * @param Posy Vertical location for the EntityEnemy.
 	 */
 	public EntityEnemy(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.ENEMY);
+		super(Posx, Posy, EntityType.ENEMY,500);
+		previousSide = OrderType.UP;
 	}
 	
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
 
-		for (int i = 0; i < test.size(); i++)
-		{
-			if (test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID)
-			{
-				Posx = Posx+1;
+
+			if (previousSide == OrderType.UP) {
+				boolean canmove = true;
+
+				for (int i = 0; i < test.size(); i++) 
+				{
+					if (test.get(i).GetPosx() == this.GetPosx() && test.get(i).GetPosy() == this.GetPosy() - 1)
+					{
+						if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() != EntityType.PLAYER))
+						{
+							canmove = false;
+						}
+					}
+					
+				}
+				
+				if(canmove)
+					Posy = Posy - 1;
+				else
+					this.previousSide = OrderType.RIGHT;
 			}
-			if (test.get(i).GetPosx() == this.getPosx()-1 && test.get(i).GetPosy() == this.getPosy() && test.get(i).getType() == EntityType.VOID)
-			{
-				Posx = Posx-1;
+			else if (previousSide == OrderType.DOWN) {
+				boolean canmove = true;
+
+				for (int i = 0; i < test.size(); i++) 
+				{
+					if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy() + 1)
+					{
+						if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
+						{
+							canmove = false;
+						}
+					}
+				}
+				if(canmove)
+					Posy = Posy + 1;
+					else
+						this.previousSide = OrderType.LEFT;
+
 			}
-			if (test.get(i).GetPosx() == this.getPosx() && test.get(i).GetPosy() == this.getPosy()+1 && test.get(i).getType() == EntityType.VOID)
-			{
-				Posy = Posy+1;
+			else if (previousSide == OrderType.LEFT) {
+				boolean canmove = true;
+
+				for (int i = 0; i < test.size(); i++) 
+				{
+					if (test.get(i).GetPosx() == this.getPosx()-1 && test.get(i).GetPosy() == this.getPosy())
+					{
+						if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() != EntityType.PLAYER))
+						{
+							canmove = false;
+						}
+					}
+				}
+				
+				if(canmove)
+					Posx = Posx - 1;
+					else
+						this.previousSide = OrderType.UP;
+
 			}
-			if (test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy()-1 && test.get(i).getType() == EntityType.VOID)
-			{
-				Posy = Posy-1;
-			}	
-	}
+			else  {
+				boolean canmove = true;
+
+				for (int i = 0; i < test.size(); i++) 
+				{
+					if (test.get(i).GetPosx() == this.getPosx()+1 && test.get(i).GetPosy() == this.getPosy())
+					{
+						if((test.get(i).getType() != EntityType.VOID) && (test.get(i).getType() !=EntityType.PLAYER))
+						{
+							canmove = false;
+						}
+					}
+				}
+				if(canmove)
+					Posx = Posx + 1;
+					else
+						this.previousSide = OrderType.DOWN;
+			}
+
+	
 		return test;
 	}
 
+	
+	
 	@Override
 	public int GetPosx() {
 		// TODO Auto-generated method stub

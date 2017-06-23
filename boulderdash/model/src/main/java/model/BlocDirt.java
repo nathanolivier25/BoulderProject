@@ -19,7 +19,7 @@ public class BlocDirt extends Entity {
 	 * @param Posy Vertical location for the BlockDirt.
 	 */
 	public BlocDirt(int Posx, int Posy) {
-		super(Posx, Posy, EntityType.DIRT);
+		super(Posx, Posy, EntityType.DIRT,0);
 	}
 
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order) {
@@ -40,6 +40,7 @@ public class BlocDirt extends Entity {
 			}
 		}
 		// TODO Auto-generated method stub
+		
 		return test;
 
 	}

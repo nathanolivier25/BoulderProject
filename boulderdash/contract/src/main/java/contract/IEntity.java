@@ -49,8 +49,13 @@ public interface IEntity
 	 * @return return
 	 */
 	public ArrayList<IEntity> Update(ArrayList<IEntity> test, OrderType order);
-
 	
+	
+	public void restartClock();
+
+
+	public boolean canExec();
+
 
 	
 
