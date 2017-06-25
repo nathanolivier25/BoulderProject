@@ -37,6 +37,7 @@ public class Model implements IModel{
 	
 	public void Reload(int world)
 	{
+		
 		try {
 			model = LevelDAO.getBackground(world);
 		} catch (SQLException e) {

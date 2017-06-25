@@ -59,7 +59,6 @@ public class View implements IView, KeyListener{
 		windows.setVisible(true);
 
 
-
 		loadImage(world);
 		
 		windows.addKeyListener(this);
@@ -74,6 +73,10 @@ public class View implements IView, KeyListener{
 	
 	public void Reload(int world)
 	{
+		mapSizeX = 0;
+		mapSizeY = 0;
+		windows.repaint();
+		windows.getContentPane().setBackground(Color.BLACK);
 		image.clear();
 		loadImage(world);
 	}
@@ -93,8 +96,6 @@ public class View implements IView, KeyListener{
 	 */
 	public void DrawMap(ArrayList<IEntity> drawMap)
 	{
-		windows.getContentPane().setBackground(Color.BLACK);
-		windows.getGraphics().fillRect(0, 0, mapSizeX, mapSizeY);
 		
 		if(mapSizeX == 0 && mapSizeY == 0)
 		{
